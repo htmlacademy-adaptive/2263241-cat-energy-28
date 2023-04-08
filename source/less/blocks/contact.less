@@ -1,37 +1,42 @@
-@import url("../global.less");
+@import url("../global/global.less");
 
 .contact {
   padding: 26px 0;
+
+  &--catalog {
+    background-color: #f2f2f2;
+  }
+}
+
+.contact__container {
   display: flex;
+  width: @container-width;
+  margin: 0 auto;
+}
 
-  &__partnership {
-      width: 139px;
-      padding: 0;
-      padding-right: 20px;
-      margin: 0;
-      font-family: @font-title;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      color: #000000;
-      text-align: left;
-    }
+.contact__partnership {
+  width: 139px;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+  .set-font--contact__partnership();
+  text-align: left;
+}
 
-    &__address {
-      width: 139px;
-    }
+.contact__address {
+  width: 139px;
+}
 
-    &__address-street {
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      line-height: 20px;
-    }
+.contact__address-street {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  .set-font--contact__address-street();
+}
 
-    &__address-city {
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      line-height: 20px;
-    }
+.contact__address-city {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  .set-font--contact__address-street();
 }

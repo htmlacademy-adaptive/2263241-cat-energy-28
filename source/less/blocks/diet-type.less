@@ -1,22 +1,22 @@
+@import url("../global/mixins.less");
+
 .diet-type {
   padding-bottom: 20px;
   padding-top: 20px;
+}
 
-  &__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+.diet-type__list {
+  .list-reset();
+}
 
-  &__item {
-    background-color: #f2f2f2;
-    padding-left: 20px;
-    padding-right: 33px;
-    padding-top: 30px;
-    padding-bottom: 18px;
-  }
+.diet-type__item {
+  background-color: #f2f2f2;
+  padding-left: 20px;
+  padding-right: 33px;
+  padding-top: 30px;
+  padding-bottom: 18px;
+}
 
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
+.diet-type__item:not(:last-child) {
+  margin-bottom: 20px;
 }

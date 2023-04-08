@@ -1,15 +1,11 @@
-@import url("../global.less");
+@import url("../global/global.less");
 
 .page {
   height: 100%;
 }
 
 .page__body {
-  font-family: @font-text;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: @font-color;
+  .set-font();
   margin: 0;
   position: relative;
 }

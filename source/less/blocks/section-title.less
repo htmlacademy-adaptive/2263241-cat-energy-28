@@ -1,13 +1,9 @@
-@import url("../global.less");
+@import url("../global/global.less");
 
 .section-title {
   padding: 0;
-  width: 280px;
+  width: @container-width;
   box-sizing: border-box;
-  font-family: @font-title;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  color: #000000;
+  .set-font--section-title();
   text-align: left;
 }

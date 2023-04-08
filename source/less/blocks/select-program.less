@@ -1,48 +1,41 @@
-@import url("../global.less");
-
-.text-param() {
-  color: #ffffff;
-  font-family: @font-title;
-  font-weight: 400;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
+@import url("../global/global.less");
 
 .select-program {
   padding-top: 27px;
   box-sizing: border-box;
+  width: @page-width;
   min-height: 302px;
   background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../../img/mobile/index-background-mobile.jpg");
   background-position: top, top;
   background-repeat: no-repeat;
   background-size: 320px 302px, 320px 302px;
-  width: 320px;
+}
 
-  &__title {
-    width: 260px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    padding: 0;
-    .text-param();
-    font-size: 36px;
-    line-height: 36px;
-  }
+.select-program__title {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+  .set-font--select-program__title();
+  text-align: center;
+  overflow-wrap: anywhere;
+}
 
-  &__slogan {
-    width: 198px;
-    margin: 0 auto;
-    margin-bottom: 29px;
-    padding: 0;
-    .text-param();
-    font-size: 14px;
-    line-height: 14px;
-  }
+.select-program__slogan {
+  width: 198px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+  padding: 0;
+  .set-font--select-program__slogan();
+  text-align: center;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
 
-  &__button {
-    margin: 0 auto;
-  }
+.select-program__button {
+  margin: 0 auto;
+}
 
-  &__image {
-    display: flex;
-  }
+.select-program__image {
+  display: flex;
 }

@@ -1,0 +1,25 @@
+@import url("../global/global.less");
+
+.parameters {
+  .fieldset-reset();
+  padding-bottom: 24px;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.parameters__container {
+  width: @container-width;
+  margin: 0 auto;
+}
+
+.parameters__input-name-container {
+  margin-bottom: 14px;
+}
+
+.parameters__input-weight-container {
+  margin-bottom: 14px;
+}
+
+.parameters__label,
+.parameters__input {
+  .set-font--modal-text(@modal-text--color);
+}

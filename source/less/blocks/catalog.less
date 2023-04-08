@@ -1,0 +1,67 @@
+@import url("../global/global.less");
+
+.catalog {
+  width: @page-width;
+  padding-top: 27px;
+}
+
+.catalog__title {
+  padding-bottom: 41px;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.catalog__list {
+  .list-reset();
+}
+
+.catalog__card {
+  padding-top: 19px;
+  padding-bottom: 25px;
+  border-bottom: 1px #d9d9d9 solid;
+
+  &--show-more {
+    padding-top: 25px;
+  }
+}
+
+.catalog__card-container-show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog__card-img--show-more {
+  margin-bottom: 23px;
+}
+
+.catalog__card-description {
+  margin-bottom: 13px;
+}
+
+.catalog__card-title {
+  width: 76px;
+  padding: 0;
+  margin: 0;
+  .set-font--catalog__card-title();
+  text-align: left;
+
+  &--show-more {
+    text-align: center;
+    width: 220px;
+    margin-bottom: 8px;
+  }
+}
+
+.catalog__card-term,
+.catalog__card-desc {
+  padding: 0;
+  margin: 0;
+  .set-font--catalog__card-desc();
+  text-align: left;
+
+  &--show-more {
+    text-align: center;
+    width: 220px;
+    margin-bottom: 21px;
+  }
+}

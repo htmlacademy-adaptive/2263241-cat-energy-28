@@ -1,21 +1,22 @@
-@import url("../global.less");
+@import url("../global/global.less");
 
 .button {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   padding: 7px 44px;
-  background-color: #68b738;
-  font-family: @font-title;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  background-color: @button--background-color;
+  .set-font--button();
   text-align: center;
-  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
 
-  &--select-program {
-    width: 280px;
+  &--mobile-wide {
+    width: @container-width;
+  }
+
+  &--show-more {
+    background-color: @button-show-more--background-color;
+    .set-font--button-show-more ();
   }
 }

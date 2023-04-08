@@ -1,0 +1,77 @@
+@import url("../global/global.less");
+
+.catalog-optional {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.catalog-optional__title {
+  width: @container-width;
+  padding: 0;
+  padding-bottom: 36px;
+  margin: 0;
+  .set-font--catalog-optional__title();
+  text-align: left;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.catalog-optional__list {
+  .list-reset();
+}
+
+.catalog-optional__card {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px #d9d9d9 solid;
+}
+
+.catalog-optional__card-title {
+  width: @container-width;
+  padding: 0;
+  padding-bottom: 13px;
+  margin: 0;
+  .set-font--catalog-optional__card-title();
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.catalog-optional__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.catalog-optional__package {
+  .set-font--catalog-optional__package();
+}
+
+.catalog-optional__price {
+  .set-font--catalog-optional__package();
+}
+
+.catalog-optional__bonus {
+  padding-top: 35px;
+}
+
+.catalog-optional__bonus-container {
+  width: @container-width;
+  min-height: 290px;
+  box-sizing: border-box;
+  background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../../img/mobile/cat-in-bag-mobile.jpg");
+  background-color: fade(#68b738, 85%);
+  background-position: top, top;
+  background-repeat: no-repeat;
+  background-size: 280px 290px, 280px 290px;
+  padding-top: 189px;
+  padding-bottom: 10px;
+  padding-left: 58px;
+  padding-right: 61px;
+}
+
+.catalog-optional__bonus-text {
+  margin: 0;
+  width: 161px;
+  text-align: center;
+  .set-font--catalog-optional__bonus-text();
+}
