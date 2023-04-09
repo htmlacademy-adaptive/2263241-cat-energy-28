@@ -1,0 +1,34 @@
+@import url("../global/global.less");
+
+.main-nav {
+  position: relative;
+
+  &--js {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.main-nav__list {
+  width: 320px;
+  .list-reset();
+  top: 0;
+  left: 0;
+}
+
+.main-nav__item {
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.main-nav__link {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .set-font--main-nav__link ();
+  background-color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+}

@@ -1,0 +1,120 @@
+.set-font(@font-family: @font-text; @font-size: @main-text--size; @font-weight: @main-text--weight; @line-height: @main-text--line-height; @color: @main-text--color) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
+  line-height: @line-height;
+  color: @color;
+}
+
+.list-reset() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.fieldset-reset() {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+//типографика index
+.set-font--button() {
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 18px; @color: @button--color);
+}
+
+.set-font--button-show-more() {
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 18px; @color: @button-show-more--color);
+}
+
+.set-font--button-diet() {
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @button-diet--color);
+}
+
+.set-font--contact__partnership() {
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @contact-title--color);
+}
+
+.set-font--contact__address-street() {
+  .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 20px; @color: @contact-text--color);
+}
+
+.set-font--copyright__link() {
+  .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 19px; @color: @copyright-link--color);
+}
+
+.set-font--diet__title() {
+  .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 37px; @color: @diet-title--color);
+}
+
+.set-font--main-nav__link() {
+  .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 500; @line-height: 20px; @color: @main-nav--color);
+}
+
+.set-font--result__number() {
+  .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 24px; @color: @result-number--color);
+}
+
+.set-font--result__description() {
+  .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 12px; @color: @result-desc--color);
+}
+
+.set-font--result__expenses() {
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 20px; @color: @result-expenses--color);
+}
+
+.set-font--section-title() {
+  .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 40px; @color: @section-title--color);
+}
+
+.set-font--select-program__title() {
+  .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @select-title--color);
+}
+
+.set-font--select-program__slogan() {
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 14px; @color: @select-slogan--color);
+}
+
+//типографика каталога
+.set-font--catalog__card-title() {
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @card-title--color);
+}
+.set-font--catalog__card-desc() {
+  .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 14px; @color: @card-desc--color);
+}
+
+.set-font--catalog-optional__title() {
+  .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @option-title--color);
+}
+
+.set-font--catalog-optional__card-title() {
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @option-card-title--color);
+}
+
+.set-font--catalog-optional__package() {
+  .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 14px; @color: @option-card-package--color);
+}
+
+.set-font--catalog-optional__bonus-text() {
+  .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @option-bonus-text--color);
+}
+
+//типографика модалки
+.set-font--modal-content__request() {
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 18px; @color: @modal-request--color);
+}
+
+.set-font--modal-text(@modal-color:@modal-text--color) {
+  text-align: left;
+  text-transform: uppercase;
+
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @modal-color);
+}
+
+.set-font--fieldset-title() {
+  .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 26px; @color: @modal-fieldset-title--color);
+}
+
+.set-font--required() {
+  .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 16px; @color: @modal-text-required--color);
+}

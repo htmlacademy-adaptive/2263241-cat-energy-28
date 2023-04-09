@@ -1,0 +1,59 @@
+@import url("../global/global.less");
+
+.result {
+  background-color: #eaeaea;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.result__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.result__text {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.result__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.result__item {
+  width: 124px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.result__number {
+  .set-font--result__number();
+  text-align: center;
+}
+
+.result__description {
+  width: 87px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  .set-font--result__description();
+  text-align: center;
+  align-self: center;
+}
+
+.result__expenses {
+  width: @container-width;
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 20px;
+  .set-font--result__expenses();
+  text-align: center;
+}

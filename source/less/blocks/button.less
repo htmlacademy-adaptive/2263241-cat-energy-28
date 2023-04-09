@@ -1,0 +1,22 @@
+@import url("../global/global.less");
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: 7px 44px;
+  background-color: @button--background-color;
+  .set-font--button();
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  &--mobile-wide {
+    width: @container-width;
+  }
+
+  &--show-more {
+    background-color: @button-show-more--background-color;
+    .set-font--button-show-more ();
+  }
+}
