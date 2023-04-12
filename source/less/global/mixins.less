@@ -47,8 +47,8 @@
   .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 37px; @color: @diet-title--color);
 }
 
-.set-font--main-nav__link() {
-  .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 500; @line-height: 20px; @color: @main-nav--color);
+.set-font--main-nav__link(@font-size-text:20px; @font-weight-text: 500; @line-height-text:20px; @color-text: @title-color) {
+  .set-font(@font-family: @font-title; @font-size: @font-size-text; @font-weight: @font-weight-text; @line-height: @line-height-text; @color: @color-text);
 }
 
 .set-font--result__number() {

@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Подбор программы</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body wrapper">
-  <header class="main-header ">
-    <div class="menu-wrapper">
+  <header class="main-header container">
+    <div class="main-header__logo-wrapper">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
+        <img class="main-header__logo-image logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
           alt="Интернет-магазин Кэт Энерджи.">
-      </a>
-      <a class="main-header__logo-title">
-        <img class="main-header__logo-title-image" src="img/icons/logo-title-mobile.svg" width="101" height="18"
-          alt="Интернет-магазин Кэт Энерджи.">
+
+        <img class="main-header__logo-title-image logo-title-image" src="img/icons/logo-title-mobile.svg" width="101"
+          height="18" alt="Интернет-магазин Кэт Энерджи.">
       </a>
       <button class="main-header__toggle menu-button menu-button--close" type="button">
         <span class="visually-hidden">Открыть меню.</span>
@@ -35,10 +35,11 @@
         </li>
       </ul>
     </nav>
+
   </header>
   <main class="main-index main-wrapper">
     <h1 class="visually-hidden">Форма подбора питания</h1>
-    <section class="modal-content">
+    <section class="modal-content container">
       <div class="modal-content__title-container">
         <h2 class="modal-content__title section-title">Подбор программы</h2>
         <p class="modal-content__request">Заполните анкету, и мы подберем программу питания для вашего кота</p>
@@ -46,115 +47,118 @@
 
       <form class="request-form" action="https://echo.htmlacademy.ru/" method="get">
 
-        <fieldset class=" request-form__parameters parameters">
-          <legend class="visually-hidden">Параметры котика</legend>
-          <div class="parameters__container">
-            <div class="parameters__input-name-container">
-              <label class="parameters__label" for="cat-name"> ИМЯ:*</label>
-              <input class="parameters__input input" type="text" id="cat-name" name="cat-name" placeholder=""
-                value="Барсик">
-            </div>
+        <div class="request-form__parameters-container">
+          <fieldset class=" request-form__parameters parameters">
+            <legend class="visually-hidden">Параметры котика</legend>
+            <div class="parameters__container">
+              <div class="parameters__input-name-container">
+                <label class="parameters__label" for="cat-name"> ИМЯ:*</label>
+                <input class="parameters__input input" type="text" id="cat-name" name="cat-name" placeholder=""
+                  value="Барсик">
+              </div>
 
-            <div class="parameters__input-weight-container">
-              <label class="parameters__label " for="cat-weight">Вес (кг):*</label>
-              <input class="parameters__input  input" type="number" id="cat-weight" name="cat-weight" placeholder=""
-                value="7">
-            </div>
+              <div class="parameters__input-weight-container">
+                <label class="parameters__label " for="cat-weight">Вес (кг):*</label>
+                <input class="parameters__input  input" type="number" id="cat-weight" name="cat-weight" placeholder=""
+                  value="7">
+              </div>
 
-            <div class="parameters__input-age-container">
-              <label class="parameters__label " for="cat-age">Возраст (лет):</label>
-              <input class="parameters__input input" type="number" id="cat-age" name="cat-age" placeholder="" value="7">
+              <div class="parameters__input-age-container">
+                <label class="parameters__label " for="cat-age">Возраст (лет):</label>
+                <input class="parameters__input input" type="number" id="cat-age" name="cat-age" placeholder=""
+                  value="7">
+              </div>
             </div>
-          </div>
-        </fieldset>
+          </fieldset>
 
-        <fieldset class="request-form__type-diet type-diet">
-          <legend class="visually-hidden">Вариант диеты</legend>
-          <ul class="type-diet__list">
-            <li class="type-diet__item">
-              <label class="type-diet__control">
-                <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="slim" checked>
-                <span class="type-diet__mark"></span>
-                <span class="type-diet__label">Похудение</span>
-              </label>
-            </li>
-            <li class="type-diet__item">
-              <label class="type-diet__control">
-                <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="fat">
-                <span class="type-diet__mark"></span>
-                <span class="type-diet__label">Набор массы</span>
-              </label>
-            </li>
-            <li class="type-diet__item">
-              <label class="type-diet__control">
-                <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="advice">
-                <span class="type-diet__mark"></span>
-                <span class="type-diet__label">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="request-form__type-diet type-diet">
+            <legend class="visually-hidden">Вариант диеты</legend>
+            <ul class="type-diet__list">
+              <li class="type-diet__item">
+                <label class="type-diet__control">
+                  <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="slim" checked>
+                  <span class="type-diet__mark"></span>
+                  <span class="type-diet__label">Похудение</span>
+                </label>
+              </li>
+              <li class="type-diet__item">
+                <label class="type-diet__control">
+                  <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="fat">
+                  <span class="type-diet__mark"></span>
+                  <span class="type-diet__label">Набор массы</span>
+                </label>
+              </li>
+              <li class="type-diet__item">
+                <label class="type-diet__control">
+                  <input class="type-diet__input visually-hidden" type="radio" name="diet-variant" value="advice">
+                  <span class="type-diet__mark"></span>
+                  <span class="type-diet__label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
         <fieldset class="request-form__contact-owner contact-owner">
           <legend class="contact-owner__title fieldset-title">Контактные данные (владельца кота)</legend>
 
           <div class="contact-owner__input-email-container">
-              <label class="contact-owner__label " for="owner-email"> E-mail:*</label>
-              <input class="contact-owner__input input" type="email" id="owner-email" name="owner-email" placeholder=""
-                value="kuklachev@gmail.com">
-            </div>
+            <label class="contact-owner__label " for="owner-email"> E-mail:*</label>
+            <input class="contact-owner__input input" type="email" id="owner-email" name="owner-email" placeholder=""
+              value="kuklachev@gmail.com">
+          </div>
 
-            <div class="contact-owner__input-phone-container">
-              <label class="contact-owner__label " for="owner-phone"> Телефон:*</label>
-              <input class="contact-owner__input input" type="text" id="owner-phone" name="owner-phone" placeholder=""
-                value="8 (960) 900-60-90">
-            </div>
+          <div class="contact-owner__input-phone-container">
+            <label class="contact-owner__label " for="owner-phone"> Телефон:*</label>
+            <input class="contact-owner__input input" type="text" id="owner-phone" name="owner-phone" placeholder=""
+              value="8 (960) 900-60-90">
+          </div>
         </fieldset>
 
         <fieldset class="request-form__comment comment">
 
-            <legend class="comment__title fieldset-title">Комментарий</legend>
-            <textarea class="comment__text" name="comment" id="comment" cols="30" rows="10"
-              placeholder="Расскажите обо всех повАдках кота"></textarea>
+          <legend class="comment__title fieldset-title">Комментарий</legend>
+          <textarea class="comment__text" name="comment" id="comment" cols="30" rows="10"
+            placeholder="Расскажите обо всех повАдках кота"></textarea>
 
         </fieldset>
 
         <fieldset class="request-form__options options">
 
-            <legend class="options__title fieldset-title">Дополнительно</legend>
-            <ul class="options__list">
-              <li class="options__item">
-                <label class="options__control">
-                  <input class="options__input visually-hidden" type="checkbox" name="sweetener" checked>
-                  <span class="options__mark"></span>
-                  <span class="options__label">Сахарозаменитель</span>
-                </label>
-              </li>
+          <legend class="options__title fieldset-title">Дополнительно</legend>
+          <ul class="options__list">
+            <li class="options__item">
+              <label class="options__control">
+                <input class="options__input visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="options__mark"></span>
+                <span class="options__label">Сахарозаменитель</span>
+              </label>
+            </li>
 
-              <li class="options__item">
-                <label class="options__control">
-                  <input class="options__input visually-hidden" type="checkbox" name="water">
-                  <span class="options__mark"></span>
-                  <span class="options__label">Питьевая вода</span>
-                </label>
-              </li>
+            <li class="options__item">
+              <label class="options__control">
+                <input class="options__input visually-hidden" type="checkbox" name="water">
+                <span class="options__mark"></span>
+                <span class="options__label">Питьевая вода</span>
+              </label>
+            </li>
 
-              <li class="options__item">
-                <label class="options__control">
-                  <input class="options__input visually-hidden" type="checkbox" name="milk">
-                  <span class="options__mark"></span>
-                  <span class="options__label">Молоко</span>
-                </label>
-              </li>
+            <li class="options__item">
+              <label class="options__control">
+                <input class="options__input visually-hidden" type="checkbox" name="milk">
+                <span class="options__mark"></span>
+                <span class="options__label">Молоко</span>
+              </label>
+            </li>
 
-              <li class="options__item">
-                <label class="options__control">
-                  <input class="options__input visually-hidden" type="checkbox" name="vitamins">
-                  <span class="options__mark"></span>
-                  <span class="options__label">Витамины</span>
-                </label>
-              </li>
-            </ul>
+            <li class="options__item">
+              <label class="options__control">
+                <input class="options__input visually-hidden" type="checkbox" name="vitamins">
+                <span class="options__mark"></span>
+                <span class="options__label">Витамины</span>
+              </label>
+            </li>
+          </ul>
 
         </fieldset>
 

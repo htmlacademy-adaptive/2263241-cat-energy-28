@@ -10,7 +10,7 @@
 
 .contact__container {
   display: flex;
-  width: @container-width;
+  width: @mobile-container-width;
   margin: 0 auto;
 }
 
@@ -39,4 +39,42 @@
   margin: 0;
   text-align: left;
   .set-font--contact__address-street();
+}
+
+@media (min-width: @tablet-width) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+    width: @tablet-container-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact__container {
+    display: flex;
+    width: 425px;
+    margin: 0;
+  }
+
+  .contact--catalog {
+    width: 565px;
+    box-sizing: border-box;
+    background-color: @main-color;
+    padding-top: 60px;
+    padding-bottom: 56px;
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+
+  .contact__partnership {
+    box-sizing: border-box;
+    padding: 0;
+    width: 163px;
+    margin-right: 87px;
+  }
+
+  .contact__adress {
+    width: 175px;
+  }
 }

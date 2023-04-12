@@ -1,17 +1,17 @@
 @import url("../global/global.less");
 
 .type-diet {
-  .fieldset-reset();
+  box-sizing: border-box;
   padding-bottom: 25px;
   padding-top: 28px;
+  border: 0;
   border-bottom: 1px #d9d9d9 solid;
-  margin-bottom: 26px;
 }
 
 .type-diet__list {
   .list-reset();
-  width: 280px;
-  margin: 0 auto;
+  width: @mobile-container-width;
+  box-sizing: border-box;
 }
 
 .type-diet__item:not(:last-child) {
@@ -20,4 +20,16 @@
 
 .type-diet__label {
   .set-font--modal-text(@modal-text-type-diet--color);
+}
+
+@media (min-width: @tablet-width) {
+  .type-diet {
+    border: 1px #d9d9d9 solid;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type-diet {
+    border: 1px #d9d9d9 solid;
+  }
 }

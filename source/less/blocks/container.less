@@ -1,6 +1,14 @@
 @import url("../global/global-var.less");
 
 .container {
-  width: @container-width;
   margin: 0 auto;
+  width: @mobile-container-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-container-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-container-width;
+  }
 }

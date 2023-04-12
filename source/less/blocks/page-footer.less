@@ -1,7 +1,7 @@
 @import url("../global/global.less");
 
 .page-footer {
-  background-color: @footer-background-color;
+  background-color: @second-color;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -14,15 +14,29 @@
 
 .page-footer__logo-title {
   padding-bottom: 20px;
-  border-bottom: 1px #d9d9d9 solid;
+  border-bottom: 1px @section-border-color solid;
 }
 
 .page-footer__social {
   padding-top: 23px;
   padding-bottom: 22px;
-  border-bottom: 1px #d9d9d9 solid;
+  border-bottom: 1px @section-border-color solid;
 }
 
 .page-footer__copyright {
   padding-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

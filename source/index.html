@@ -3,21 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body wrapper">
 
-  <header class="main-header ">
-    <div class="menu-wrapper">
+  <header class="main-header container">
+    <div class="main-header__logo-wrapper">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
+        <img class="main-header__logo-image logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
           alt="Интернет-магазин Кэт Энерджи.">
-      </a>
-      <a class="main-header__logo-title">
-        <img class="main-header__logo-title-image" src="img/icons/logo-title-mobile.svg" width="101" height="18"
-          alt="Интернет-магазин Кэт Энерджи.">
+
+        <img class="main-header__logo-title-image logo-title-image" src="img/icons/logo-title-mobile.svg" width="101"
+          height="18" alt="Интернет-магазин Кэт Энерджи.">
       </a>
       <button class="main-header__toggle menu-button menu-button--close" type="button">
         <span class="visually-hidden">Открыть меню.</span>
@@ -36,6 +36,7 @@
         </li>
       </ul>
     </nav>
+
   </header>
   <main class="main-index main-wrapper">
     <h1 class="visually-hidden">Кэт Энерджи - Подбор оптимального питания для котов</h1>
@@ -104,17 +105,19 @@
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день.
         </p>
-        <dl class="result__list">
-          <div class="result__item">
-            <dt class="result__number">5 КГ</dt>
-            <dd class="result__description"> снижение веса</dd>
-          </div>
-          <div class="result__item">
-            <dt class="result__number">60 ДНЕЙ</dt>
-            <dd class="result__description"> затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="result__expenses">Затраты на питание: 15 000 РУБ. </p>
+        <div class="result__container">
+          <dl class="result__list">
+            <div class="result__item">
+              <dt class="result__number">5 КГ</dt>
+              <dd class="result__description"> снижение веса</dd>
+            </div>
+            <div class="result__item">
+              <dt class="result__number">60 ДНЕЙ</dt>
+              <dd class="result__description"> затрачено времени</dd>
+            </div>
+          </dl>
+          <p class="result__expenses">Затраты на питание: 15 000 РУБ. </p>
+        </div>
 
 
         <div class="slider-cats">

@@ -1,7 +1,7 @@
 @import url("../global/global.less");
 
 .catalog {
-  width: @page-width;
+  width: @mobile-width;
   padding-top: 27px;
 }
 
@@ -63,5 +63,55 @@
     text-align: center;
     width: 220px;
     margin-bottom: 21px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: @tablet-container-width;
+    padding-top: 90px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    column-gap: 60px;
+  }
+
+  .catalog__card {
+    width: 324px;
+    padding-top: 19px;
+    padding-bottom: 25px;
+    border-bottom: 1px #d9d9d9 solid;
+
+    &--show-more {
+      width: 324px;
+      padding-top: 25px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: @desktop-container-width;
+    padding-top: 90px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
+
+  .catalog__card {
+    width: 245px;
+    padding-top: 19px;
+    padding-bottom: 25px;
+    border-bottom: 1px #d9d9d9 solid;
+
+    &--show-more {
+      width: 245px;
+      padding-top: 25px;
+    }
   }
 }

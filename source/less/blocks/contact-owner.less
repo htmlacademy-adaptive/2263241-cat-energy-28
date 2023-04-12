@@ -13,3 +13,28 @@
 .contact-owner__input {
   .set-font--modal-text(@modal-text--color);
 }
+
+@media (min-width: @tablet-width) {
+  .contact-owner__input-email-container {
+    width: @tablet-container-width;
+  }
+
+  .contact-owner__input-phone-container {
+    width: @tablet-container-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact-owner {
+    display: flex;
+  }
+
+  .contact-owner__input-email-container {
+    width: 569px;
+    margin-right: 78px;
+  }
+
+  .contact-owner__input-phone-container {
+    width: 569px;
+  }
+}
