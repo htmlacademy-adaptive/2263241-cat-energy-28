@@ -5,8 +5,20 @@
 }
 
 .comment__text {
-  width: @container-width;
+  width: @mobile-container-width;
   height: 152px;
   border: 1px #e7e7e7 solid;
   .set-font--modal-text(@modal-text--color);
+}
+
+@media (min-width: @tablet-width) {
+  .comment__text {
+    width: @tablet-container-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment__text {
+    width: @desktop-container-width;
+  }
 }

@@ -50,10 +50,26 @@
 }
 
 .result__expenses {
-  width: @container-width;
+  width: @mobile-container-width;
   padding: 0 10px;
   margin: 0;
   margin-bottom: 20px;
   .set-font--result__expenses();
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .result__container {
+    width: @tablet-container-width;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .result__container {
+    width: 366px;
+    display: flex;
+    flex-direction: column;
+  }
 }

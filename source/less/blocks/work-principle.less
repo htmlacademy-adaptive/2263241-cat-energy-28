@@ -18,10 +18,48 @@
 }
 
 .work-principle__description {
-  width: @container-width;
+  width: @mobile-container-width;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   padding-left: 80px;
   text-align: left;
+}
+
+@media (min-width: @tablet-width) {
+  .work-principle {
+    padding-bottom: 47px;
+  }
+
+  .work-principle__title {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .work-principle__list {
+    width: @tablet-container-width;
+    display: grid;
+    grid-template-columns: 230px 230px;
+    column-gap: 154px;
+    row-gap: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .work-principle {
+    padding-bottom: 69px;
+  }
+
+  .work-principle__title {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .work-principle__list {
+    width: @desktop-container-width;
+    display: grid;
+    grid-template-columns: repeat(4, 230px);
+    column-gap: 95px;
+    row-gap: 37px;
+  }
 }

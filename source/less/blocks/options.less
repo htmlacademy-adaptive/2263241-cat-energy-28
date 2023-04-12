@@ -13,5 +13,32 @@
 }
 
 .options__label {
+  padding-left: 50px;
   .set-font--modal-text(@modal-text-options--color);
+}
+
+@media (min-width: @tablet-width) {
+  .options__list {
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    column-gap: 81px;
+    row-gap: 32px;
+  }
+
+  .options__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options__list {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    column-gap: 60px;
+    row-gap: 32px;
+  }
+
+  .options__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }

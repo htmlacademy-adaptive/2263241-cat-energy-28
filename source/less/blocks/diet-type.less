@@ -7,6 +7,7 @@
 
 .diet-type__list {
   .list-reset();
+  width: @mobile-container-width;
 }
 
 .diet-type__item {
@@ -19,4 +20,37 @@
 
 .diet-type__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .diet-type {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  .diet-type__list {
+    width: @tablet-container-width;
+  }
+
+  .diet-type__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .diet-type {
+    padding-top: 82px;
+    padding-bottom: 71px;
+  }
+
+  .diet-type__list {
+    width: @desktop-container-width;
+    display: grid;
+    grid-template-columns: 570px 570px;
+    column-gap: 80px;
+  }
+
+  .diet-type__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }

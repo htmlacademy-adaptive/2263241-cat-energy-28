@@ -2,9 +2,14 @@
 @font-title: "Oswald", sans-serif;
 @font-text: "Lato", sans-serif;
 
-//ширина экрана mobile
-@page-width: 320px;
-@container-width: 280px;
+// Viewports
+@mobile-width: 320px;
+@tablet-width: 769px;
+@desktop-width: 1440px;
+
+@mobile-container-width: 280px;
+@tablet-container-width: 708px;
+@desktop-container-width: 1220px;
 
 //базовая типографика
 @main-text--size: 16px;
@@ -12,7 +17,13 @@
 @main-text--line-height: 18px;
 @main-text--color: #444444;
 
-//background-color
+//base color
+@title-color: #000000;
+@accent-color: #68b738;
+@main-color: #ffffff;
+@second-color: #f2f2f2;
+@section-border-color: #d9d9d9;
+
 @footer-background-color: #f2f2f2;
 @button--background-color: #68b738;
 @button-show-more--background-color: #f2f2f2;
@@ -24,7 +35,7 @@
 
 @card-title--color: #222222;
 @card-desc--color: @main-text--color;
-@option-title--color: #000000;
+@option-title--color: @title-color;
 @option-card-title--color: #222222;
 @option-card-package--color: @main-text--color;
 @option-bonus-text--color: #ffffff;
@@ -32,18 +43,18 @@
 @contact-title--color:#111111;
 @contact-text--color: @main-text--color;
 @copyright-link--color: @main-text--color;
-@diet-title--color: #000000;
-@main-nav--color: #000000;
-@result-number--color: #000000;
+@diet-title--color: @title-color;
+// @main-nav--color: @title-color;
+@result-number--color: @title-color;
 @result-desc--color:@main-text--color;
-@result-expenses--color: #000000;
-@section-title--color: #000000;
+@result-expenses--color: @title-color;
+@section-title--color: @title-color;
 @select-title--color: #ffffff;
 @select-slogan--color: #ffffff;
 
-@modal-request--color:#000000;
+@modal-request--color:@title-color;
 @modal-text--color:@main-text--color;
 @modal-text-type-diet--color: #222222;
-@modal-fieldset-title--color: #000000;
-@modal-text-options--color: #000000;
-@modal-text-required--color: #000000;
+@modal-fieldset-title--color: @title-color;
+@modal-text-options--color: @title-color;
+@modal-text-required--color: @title-color;

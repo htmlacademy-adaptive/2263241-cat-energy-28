@@ -3,7 +3,7 @@
 .select-program {
   padding-top: 27px;
   box-sizing: border-box;
-  width: @page-width;
+  width: @mobile-width;
   min-height: 302px;
   background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../../img/mobile/index-background-mobile.jpg");
   background-position: top, top;
@@ -38,4 +38,16 @@
 
 .select-program__image {
   display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .select-program {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .select-program {
+    width: @desktop-width;
+  }
 }
