@@ -10,7 +10,7 @@
 
 <body class="page__body wrapper">
 
-  <header class="main-header container">
+  <header class="main-header">
     <div class="main-header__logo-wrapper">
       <a class="main-header__logo">
         <img class="main-header__logo-image logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
@@ -19,12 +19,12 @@
         <img class="main-header__logo-title-image logo-title-image" src="img/icons/logo-title-mobile.svg" width="101"
           height="18" alt="Интернет-магазин Кэт Энерджи.">
       </a>
-      <button class="main-header__toggle menu-button menu-button--close" type="button">
+    </div>
+    <nav class="main-header__nav main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle menu-button menu-button--open" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-    </div>
-    <nav class="main-header__nav main-nav "> <!-- добавить main-nav--js для использования JS-->
-      <ul class="main-nav__list">
+      <ul class="main-nav__list ">
         <li class="main-nav__item main-nav__item--current">
           <a class="main-nav__link">Главная</a>
         </li>
@@ -42,13 +42,14 @@
     <h1 class="visually-hidden">Кэт Энерджи - Подбор оптимального питания для котов</h1>
 
     <section class="select-program ">
-      <div class="container">
-        <h2 class="select-program__title">Функциональное питание для котов</h2>
-        <p class="select-program__slogan">Занялся собой? Займись котом!</p>
-
+      <div class="select-program__container">
+        <div class="select-program__text-container">
+          <h2 class="select-program__title">Функциональное питание для котов</h2>
+          <p class="select-program__slogan">Занялся собой? Займись котом!</p>
+        </div>
         <img class="select-program__image" src="img/mobile/index-can-mobile.png" width="280" height="270"
           alt="Банка с кормом.">
-        <a class="select-program__button button button--mobile-wide" href="form.html">Подобрать программу</a>
+        <a class="select-program__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
@@ -75,84 +76,94 @@
       </ul>
     </section>
 
-    <section class="work-principle container">
-      <h2 class="work-principle__title section-title">Как это работает</h2>
-      <ul class="work-principle__list">
-        <li class="work-principle__item work-principle__item--useful ">
-          <p class="work-principle__description">Функциональное питание содержит только полезные
-            питательные вещества.</p>
-        </li>
-        <li class="work-principle__item work-principle__item--release-form ">
-          <p class="work-principle__description">Выпускается в виде порошка,
-            который нужно лишь залить кипятком и готово.</p>
-        </li>
-        <li class="work-principle__item work-principle__item--mealtime ">
-          <p class="work-principle__description">Замените один-два приема
-            обычной еды на наше функциональное питание.</p>
-        </li>
-        <li class="work-principle__item work-principle__item--result ">
-          <p class="work-principle__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          </p>
-        </li>
-      </ul>
+    <section class="work-principle">
+      <div class="container">
+        <h2 class="work-principle__title section-title">Как это работает</h2>
+        <ul class="work-principle__list">
+          <li class="work-principle__item work-principle__item--useful ">
+            <p class="work-principle__description">Функциональное питание содержит только полезные
+              питательные вещества.</p>
+          </li>
+          <li class="work-principle__item work-principle__item--release-form ">
+            <p class="work-principle__description">Выпускается в виде порошка,
+              который нужно лишь залить кипятком и готово.</p>
+          </li>
+          <li class="work-principle__item work-principle__item--mealtime ">
+            <p class="work-principle__description">Замените один-два приема
+              обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="work-principle__item work-principle__item--result ">
+            <p class="work-principle__description">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего
+              питомца!
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="result">
-      <div class="container">
-        <h2 class="result__title section-title">Живой пример</h2>
-        <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-          часов в день.
-        </p>
-        <div class="result__container">
-          <dl class="result__list">
-            <div class="result__item">
-              <dt class="result__number">5 КГ</dt>
-              <dd class="result__description"> снижение веса</dd>
-            </div>
-            <div class="result__item">
-              <dt class="result__number">60 ДНЕЙ</dt>
-              <dd class="result__description"> затрачено времени</dd>
-            </div>
-          </dl>
-          <p class="result__expenses">Затраты на питание: 15 000 РУБ. </p>
+      <div class="result__wrapper container">
+        <div class="result__container-main">
+          <h2 class="result__title section-title">Живой пример</h2>
+          <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов в день.
+          </p>
+          <div class="result__container">
+            <dl class="result__list">
+              <div class="result__item">
+                <dt class="result__number">5 КГ</dt>
+                <dd class="result__description"> снижение веса</dd>
+              </div>
+              <div class="result__item">
+                <dt class="result__number">60 ДНЕЙ</dt>
+                <dd class="result__description"> затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="result__expenses">
+              <span class="result__expenses-text">Затраты на питание:</span>
+              <span class="result__expenses-sum"> 15 000 РУБ.</span>
+            </p>
+          </div>
         </div>
-
 
         <div class="slider-cats">
           <figure class="slider-cats__images">
-            <img class="slider-cats__before-cat" src="img/mobile/cat-before-mobile.png" width="280" height="256"
+            <!-- <img class="slider-cats__before-cat" src="img/mobile/cat-before-mobile.png" width="280" height="256"
               alt="Толстый котик.">
             <img class="slider-cats__after-cat" src="img/mobile/cat-after-mobile.png" width="280" height="256"
-              alt="Худой котик.">
+              alt="Худой котик."> -->
+            <img class="slider" src="img/mobile/cat-slider-mobile.png" width="280" height="256" alt="Слайдер.">
             <figcaption class="visually-hidden">Слайдер с толстым и худым котиками.</figcaption>
           </figure>
           <button class="slider-cats__toggle" type="button">
             <span class="visually-hidden">Переключатель слайдера.</span>
           </button>
         </div>
-
       </div>
     </section>
 
-    <section class="contact">
-      <div class="contact__container">
-        <h2 class="visually-hidden">Адрес.</h2>
-        <p class="contact__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <div class="contact__adress">
-          <p class=" contact__address-street">ул. Большая Конюшенная, д. 19/8 </p>
-          <span class="contact__address-city">Санкт-Петербург</span>
+    <div class="main-index__container-contact-location">
+      <section class="main-index__contact contact">
+        <div class="contact__container">
+          <h2 class="visually-hidden">Адрес.</h2>
+          <p class="contact__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <div class="contact__address">
+            <p class=" contact__address-street">ул. Большая Конюшенная, д. 19/8 </p>
+            <span class="contact__address-city">Санкт-Петербург</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="location">
-      <h2 class="visually-hidden">Карта с адресом.</h2>
-      <img class="location__image" src="img/mobile/location_mobile.jpg" width="320" height="362"
-        alt="Карта города с указанным адресом.">
-    </section>
-
+      <section class="main-index__location location">
+        <h2 class="visually-hidden">Карта с адресом.</h2>
+        <iframe class="location__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1681654305706!5m2!1sru!2sru"
+          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </div>
   </main>
   <footer class="page-footer">
 
@@ -235,6 +246,7 @@
     </div>
 
   </footer>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

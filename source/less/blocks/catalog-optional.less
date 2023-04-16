@@ -6,7 +6,6 @@
 }
 
 .catalog-optional__title {
-  width: @mobile-container-width;
   padding: 0;
   padding-bottom: 36px;
   margin: 0;
@@ -26,7 +25,6 @@
 }
 
 .catalog-optional__card-title {
-  width: @mobile-container-width;
   padding: 0;
   padding-bottom: 13px;
   margin: 0;
@@ -55,7 +53,6 @@
 }
 
 .catalog-optional__bonus-container {
-  width: @mobile-container-width;
   min-height: 290px;
   box-sizing: border-box;
   background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../../img/mobile/cat-in-bag-mobile.jpg");
@@ -77,19 +74,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-optional__title {
-    width: @tablet-container-width;
-  }
-
-  .catalog-optional__list {
-    width: @tablet-container-width;
-  }
-
   .catalog-optional__card-link {
     width: @tablet-container-width;
   }
 
   .catalog-optional__card-description {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -104,21 +94,26 @@
     display: flex;
   }
 
-  .catalog-optional__title {
-    width: @desktop-container-width;
-  }
-
-  .catalog-optional__list {
-    width: @desktop-container-width;
-  }
-
   .catalog-optional__card-link {
     width: 224px;
   }
 
-  .catalog-optional__card {
+  .catalog-optional__list {
     width: 895px;
+  }
+
+  .catalog-optional__card {
     display: flex;
     justify-content: space-between;
+  }
+
+  .catalog-optional__card-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-optional__bonus {
+    width: 280px;
   }
 }

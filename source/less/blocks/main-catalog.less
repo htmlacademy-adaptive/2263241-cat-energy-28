@@ -1,0 +1,24 @@
+@import url("../global/global.less");
+
+.main-catalog__container-contact-location {
+  position: relative;
+}
+
+.main-catalog__location {
+  position: relative;
+  width: @mobile-width;
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-catalog__location {
+    width: @tablet-width;
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-catalog__location {
+    width: @desktop-width;
+  }
+}

@@ -2,7 +2,6 @@
 
 .request-form__contact-owner {
   .fieldset-reset();
-  width: @mobile-container-width;
   margin-bottom: 24px;
 }
 
@@ -12,24 +11,20 @@
 
 .request-form__type-diet {
   .fieldset-reset();
-  width: @mobile-container-width;
 }
 
 .request-form__comment {
   .fieldset-reset();
-  width: @mobile-container-width;
   margin-bottom: 40px;
 }
 
 .request-form__options {
   .fieldset-reset();
-  width: @mobile-container-width;
   margin-bottom: 40px;
 }
 
 .request-form__button {
   margin-bottom: 21px;
-  width: @mobile-container-width;
 }
 
 .request-form__required {
@@ -39,20 +34,6 @@
   padding: 0 20px;
   margin-bottom: 32px;
   .set-font--required();
-}
-
-@media (min-width: @tablet-width) {
-  .request-form__parameters {
-    width: @tablet-container-width;
-  }
-
-  .request-form__contact-owner {
-    width: @tablet-container-width;
-  }
-
-  .request-form__options {
-    width: @tablet-container-width;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -67,13 +48,5 @@
 
   .request-form__type-diet {
     width: 570px;
-  }
-
-  .request-form__contact-owner {
-    width: @desktop-container-width;
-  }
-
-  .request-form__options {
-    width: @desktop-container-width;
   }
 }

@@ -1,19 +1,29 @@
 @import url("../global/global.less");
 
 .result {
-  background-color: #eaeaea;
+  background-color: @section-background-color;
   padding-top: 25px;
   padding-bottom: 40px;
 }
 
+.result__container-main {
+  // width: @mobile-container-width;
+  // margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .result__title {
+  width: 100%;
+  box-sizing: border-box;
   margin: 0;
   margin-bottom: 40px;
+  background-color: inherit;
 }
 
 .result__text {
   margin: 0;
   margin-bottom: 20px;
+  .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 18px; @color: @main-text--color);
 }
 
 .result__list {
@@ -25,6 +35,7 @@
 }
 
 .result__item {
+  position: relative;
   width: 124px;
   box-sizing: border-box;
   display: flex;
@@ -32,8 +43,14 @@
 }
 
 .result__number {
-  .set-font--result__number();
+  .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 24px; @color: @title-color);
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  border: 1px @special-border-color solid;
 }
 
 .result__description {
@@ -44,32 +61,152 @@
   padding-bottom: 9px;
   padding-left: 14px;
   padding-right: 14px;
-  .set-font--result__description();
+  .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 12px; @color: @main-text--color);
   text-align: center;
   align-self: center;
+  margin-top: -14px;
+  background-color: @section-background-color;
 }
 
 .result__expenses {
-  width: @mobile-container-width;
-  padding: 0 10px;
+  padding: 0;
   margin: 0;
   margin-bottom: 20px;
-  .set-font--result__expenses();
+  .set-font(@font-family: @font-title; @font-size: 14px; @font-weight: 400; @line-height: 20px; @color: @title-color);
   text-align: center;
+  text-transform: uppercase;
+}
+
+.slider-cats {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.slider-cats__images {
+  display: flex;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
+  .result {
+    //background: linear-gradient(to bottom, @main-color 57%, @second-color 57% 100%);
+    background: linear-gradient(to bottom, @main-color 60%, @second-color 60% 100%);
+    padding-top: 43px;
+    padding-bottom: 101px;
+  }
+
+  .result__container-main {
+    // width: @tablet-container-width;
+    margin-bottom: 91px;
+  }
+
+  .result__title {
+    width: 100%;
+    margin-bottom: 63px;
+  }
+
+  .result__text {
+    margin-bottom: 54px;
+    .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 24px; @color: @main-text--color);
+  }
+
   .result__container {
-    width: @tablet-container-width;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .result__list {
+    margin-bottom: 0;
+    width: 366px;
+  }
+
+  .result__item {
+    width: 162px;
+  }
+
+  .result__number {
+    .set-font(@font-family: @font-title; @font-size: 30px; @font-weight: 400; @line-height: 37px; @color: @title-color);
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .result__description {
+    padding: 5px 8px;
+    width: fit-content;
+    .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 14px; @color: @main-text--color);
+    background-color: @main-color;
+  }
+
+  .result__expenses {
+    .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 20px; @color: @title-color);
+    text-align: right;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+
+  .result__expenses-text {
+    margin-bottom: 9px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .result__container {
-    width: 366px;
+  .result {
+    background: linear-gradient(to bottom, #ffffff 30%, #f2f2f2 30% 100%);
+    padding-top: 69px;
+    padding-bottom: 75px;
+  }
+
+  .result__wrapper {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .result__container-main {
+    width: 500px;
+    margin-bottom: 0;
+  }
+
+  .result__title {
+    margin-bottom: 146px;
+  }
+
+  .result__text {
+    margin-bottom: 69px;
+  }
+
+  .result__container {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result__list {
+    width: 366px;
+    margin-bottom: 47px;
+  }
+
+  .result__description {
+    background-color: @second-color;
+  }
+
+  .result__expenses {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .result__expenses-text {
+    margin-bottom: 0;
+    margin-right: 63px;
+    max-width: 180px;
+  }
+
+  .slider-cats {
+    margin: 0;
   }
 }

@@ -4,19 +4,16 @@
   display: block;
   box-sizing: border-box;
   padding: 7px 44px;
-  background-color: @button--background-color;
-  .set-font--button();
+  background-color: @accent-color;
+  .set-font(@font-family: @font-title; @font-size:14px; @font-weight:400; @line-height:18px; @color: @main-color);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
 
-  &--mobile-wide {
-    width: @mobile-container-width;
-  }
 
   &--show-more {
-    background-color: @button-show-more--background-color;
-    .set-font--button-show-more ();
+    background-color: @second-color;
+    .set-font(@font-family: @font-title; @font-size:16px; @font-weight:400; @line-height:20px; @color: @main-text--color);
   }
 }

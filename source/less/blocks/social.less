@@ -8,8 +8,23 @@
   .list-reset();
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social__item:not(:last-child) {
   margin-right: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .social__item:not(:last-child) {
+    margin-right: 26px;
+  }
+
+  .social {
+    width: 162px;
+  }
+
+  .social__list {
+    justify-content: flex-start;
+  }
 }

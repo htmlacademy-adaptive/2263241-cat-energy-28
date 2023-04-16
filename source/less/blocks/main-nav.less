@@ -2,77 +2,155 @@
 
 .main-nav {
   position: relative;
-
-  &--js {
-    position: absolute;
+  //меню открыто
+  &--opened .main-nav__list {
+    display: block;
+  }
+  //меню закрыто
+  &--closed .main-nav__list {
+    display: none;
+  }
+  //нет js, меню поверх страницы
+  &--nojs .main-nav__list {
+    width: @mobile-width;
+    position: relative;
     z-index: 1;
+    top: 0;
+    left: 0;
   }
 }
 
 .main-nav__list {
-  width: @mobile-width;
   .list-reset();
+  width: @mobile-width;
+  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__list {
-    width: 440px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__list {
-    width: 478px;
-    display: flex;
-    background-color: @accent-color;
-  }
 }
 
 .main-nav__item {
   border-bottom: 1px #e6e6e6 solid;
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__item {
-    border-bottom: none;
+.main-nav__item a[href] {
+  &:hover {
+    opacity: 0.6;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav__item {
-    border-bottom: none;
-    background-color: @accent-color;
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .main-nav__link {
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   padding-left: 20px;
   padding-right: 20px;
-  .set-font(@font-family: @font-title; @font-size:20px; @font-weight:500; @line-height:20px; @color: @title-color);
   background-color: #ffffff;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
+  .set-font(@font-family: @font-title; @font-size:20px; @font-weight:500; @line-height:20px; @color: @title-color);
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav__list {
+    position: relative;
+  }
+
+  //прячем бургер
+  .main-nav__toggle {
+    display: none;
+  }
+  //не важно открыто было меню или закрыто на мобилке, на планшете оно flex
+  .main-nav--closed .main-nav__list,
+  .main-nav--opened .main-nav__list {
+    width: 440px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__item {
+    border-bottom: none;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @accent-color;
+      }
+    }
+  }
+
   .main-nav__link {
-    .set-font(@font-family: @font-title; @font-size:20px; @font-weight:400; @line-height:30px; @color: @title-color);
     padding: 0;
+    padding-bottom: 10px;
+    background-color: @main-color;
+    .set-font(@font-family: @font-title; @font-size:18px; @font-weight:400; @line-height:24px; @color: @title-color);
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav__list {
+    position: relative;
+  }
+
+  //прячем бургер
+  .main-nav__toggle {
+    display: none;
+  }
+  //не важно открыто было меню или закрыто на мобилке, на планшете оно flex
+  .main-nav--closed .main-nav__list,
+  .main-nav--opened .main-nav__list {
+    width: 478px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+
+  .main-nav__item {
+    border-bottom: none;
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @main-color;
+      }
+    }
+  }
+
   .main-nav__link {
-    .set-font(@font-family: @font-title; @font-size:20px; @font-weight:400; @line-height:30px; @color: @main-color);
-    background-color: @accent-color;
     padding: 0;
+    padding-bottom: 10px;
+    .set-font(@font-family: @font-title; @font-size:20px; @font-weight:400; @line-height:30px; @color: @main-color);
+    background-color: fade(@accent-color, 85%);
   }
 }
