@@ -3,8 +3,12 @@
 .section-title {
   padding: 0;
   box-sizing: border-box;
-  .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 40px; @color: @title-color);
+  .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @title-color);
   text-align: left;
+
+  &--index {
+    .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 40px; @color: @title-color);
+  }
 }
 
 @media (min-width: @tablet-width) {

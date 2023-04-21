@@ -7,6 +7,18 @@
   width: @mobile-container-width;
   text-decoration: none;
   .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 19px; @color: @main-text--color);
+
+  &:hover .copyright__svg {
+    fill: @accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__svg {
+  fill: @social-color;
 }
 
 @media (min-width: @tablet-width) {

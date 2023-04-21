@@ -16,14 +16,18 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: 24px 12px;
-}
 
-.button-diet:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.button-diet:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: @tablet-width) {
