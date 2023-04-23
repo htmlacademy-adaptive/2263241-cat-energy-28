@@ -1,6 +1,26 @@
 @import url("../global/global.less");
 
+.options {
+  position: relative;
+}
+
+.options::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: @accent-color;
+  top: -50px;
+  left: 0;
+  z-index: -1;
+}
+
 .options__title {
+  .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 26px; @color: @title-color);
+  width: 141px;
+  padding-left: 20px;
+  padding-right: 23px;
+  background-color: @main-color;
   margin-bottom: 38px;
 }
 
@@ -13,27 +33,131 @@
 }
 
 .options__label {
-  padding-left: 50px;
-  .set-font--modal-text(@modal-text-options--color);
+  text-transform: uppercase;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @title-color);
+}
+
+.options__control {
+  position: relative;
+  display: block;
+  padding-left: 46px;
+  box-sizing: border-box;
+}
+
+.options__mark {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  background: @main-color;
+  border: 1px @special-border-color solid;
+}
+
+.options__input:checked + .options__mark::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icons/tick.svg");
+  background-size: 18px 14px;
+  width: 18px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.options__input:not(:disabled):hover + .options__mark {
+  border-color: @input-accent-border-color;
+}
+
+.options__input:focus-visible + .options__mark {
+  border-color: @input-accent-border-color;
+}
+
+.options__input:disabled + .options__mark {
+  opacity: 0.3;
+}
+
+.options__input:disabled + .options__mark::before {
+  opacity: 0.3;
+}
+
+.options__input:disabled + .options__mark + .options__label {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
+  .options__title {
+    .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @title-color);
+    width: 211px;
+    padding-left: 40px;
+    padding-right: 41px;
+    margin-left: 30px;
+    margin-bottom: 69px;
+  }
+
+  .options::before {
+    top: -83px;
+  }
+
   .options__list {
     display: grid;
-    grid-template-columns: repeat(2, 260px);
-    column-gap: 81px;
-    row-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+    row-gap: 42px;
   }
 
   .options__item:not(:last-child) {
     margin-bottom: 0;
   }
+
+  .options__control {
+    padding-left: 60px;
+  }
+
+  .options__mark {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background: @main-color;
+    border: 1px @special-border-color solid;
+  }
+
+  .options__input:checked + .options__mark::before {
+    background-size: 24px 18px;
+    width: 24px;
+    height: 18px;
+  }
+
+  .options__label {
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 30px; @color: @title-color);
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .options__title {
+    width: 212px;
+    padding-right: 40px;
+    margin-left: 70px;
+    margin-bottom: 73px;
+  }
+
+  .options::before {
+    top: -89px;
+  }
+
   .options__list {
     display: grid;
-    grid-template-columns: repeat(4, 260px);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 60px;
     row-gap: 32px;
   }

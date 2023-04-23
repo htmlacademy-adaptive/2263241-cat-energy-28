@@ -7,9 +7,33 @@
   padding: 4px 0;
   padding-right: 42px;
   background-color: inherit;
-  .set-font--button-diet();
-  text-align: center;
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @title-color);
+  text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
+  background-image: url("../img/icons/arrow-right.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 24px 12px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button-diet {
+    .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @title-color);
+    width: 160px;
+    padding-right: 52px;
+  }
 }

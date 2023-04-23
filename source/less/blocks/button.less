@@ -3,20 +3,42 @@
 .button {
   display: block;
   box-sizing: border-box;
-  padding: 7px 44px;
-  background-color: @button--background-color;
-  .set-font--button();
+  padding: 7px 15px;
+  background-color: @accent-color;
+  .set-font(@font-family: @font-title; @font-size:14px; @font-weight:400; @line-height:18px; @color: @main-color);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
 
-  &--mobile-wide {
-    width: @mobile-container-width;
+  &:hover {
+    background-color: @accent-button-color;
+  }
+
+  &:active {
+    color: fade(@main-color, 30%);
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+
+  &--catalog {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .set-font(@font-family: @font-title; @font-size:16px; @font-weight:400; @line-height:20px; @color: @main-color);
   }
 
   &--show-more {
-    background-color: @button-show-more--background-color;
-    .set-font--button-show-more ();
+    background-color: @second-color;
+    .set-font(@font-family: @font-title; @font-size:16px; @font-weight:400; @line-height:20px; @color: @main-text--color);
+
+    &:hover {
+      background-color: @second-button-color;
+    }
+
+    &:active {
+      color: fade(@main-text--color, 30%);
+    }
   }
 }

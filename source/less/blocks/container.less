@@ -1,7 +1,9 @@
 @import url("../global/global-var.less");
 
 .container {
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: @mobile-container-width;
 
   @media (min-width: @tablet-width) {
@@ -10,5 +12,18 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-container-width;
+  }
+
+  &--modal {
+    @media (min-width: @tablet-width) {
+      width: @tablet-modal-container-width;
+      margin-left: 71px;
+      margin-right: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: auto;
+      width: @desktop-container-width;
+    }
   }
 }

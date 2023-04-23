@@ -1,0 +1,49 @@
+@import url("../global/global.less");
+
+.input {
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px @input-border-color solid;
+  text-align: left;
+  text-transform: uppercase;
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @main-text--color);
+
+  &:hover {
+    border-color: @special-border-color;
+  }
+
+  &:focus {
+    border: 2px @main-text--color solid;
+    outline: none;
+  }
+
+  ~svg {
+    stroke: @catalog-title-color;
+  }
+
+  &:focus ~ svg {
+    stroke: @accent-color;
+  }
+
+  &:required:invalid {
+    border: 2px @status-error solid;
+    outline: none;
+
+    ~ svg {
+      stroke: @status-error;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @main-text--color);
+}

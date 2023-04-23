@@ -2,11 +2,15 @@
 
 .catalog {
   width: @mobile-width;
-  padding-top: 27px;
+  margin-bottom: 25px;
 }
 
 .catalog__title {
+  padding-top: 27px;
   padding-bottom: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
   border-bottom: 1px #d9d9d9 solid;
 }
 
@@ -24,69 +28,225 @@
   }
 }
 
+.catalog__card-container {
+  width: @mobile-container-width;
+  margin: 0 auto;
+}
+
+.catalog__card-container-inner {
+  display: flex;
+  margin-bottom: 22px;
+  align-items: center;
+}
+
+.catalog__card-list {
+  margin: 0;
+}
+
+.catalog__card-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+  column-gap: 40px;
+}
+
+.catalog__card-term {
+  padding: 0;
+  margin: 0;
+  .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 16px; @color: @main-text--color);
+  text-align: right;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.catalog__card-desc {
+  padding: 0;
+  margin: 0;
+  .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 16px; @color: @main-text--color);
+  text-align: left;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.catalog__card-img {
+  width: 140px;
+  display: block;
+
+  &--show-more {
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+}
+
+.catalog__card-title {
+  width: 76px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @catalog-title-color);
+  text-align: left;
+
+  br {
+    display: none;
+  }
+}
+
+.catalog__card-description {
+  width: 140px;
+  margin: 0;
+
+  &--show-more {
+    width: 100%;
+    margin: 0;
+  }
+
+  &--show-more .catalog__card-title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @second-title-color);
+  }
+
+  &--show-more .catalog__card-desc {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+}
+
+
 .catalog__card-container-show-more {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.catalog__card-img--show-more {
-  margin-bottom: 23px;
-}
-
-.catalog__card-description {
-  margin-bottom: 13px;
-}
-
-.catalog__card-title {
-  width: 76px;
-  padding: 0;
-  margin: 0;
-  .set-font--catalog__card-title();
-  text-align: left;
-
-  &--show-more {
-    text-align: center;
-    width: 220px;
-    margin-bottom: 8px;
-  }
-}
-
-.catalog__card-term,
-.catalog__card-desc {
-  padding: 0;
-  margin: 0;
-  .set-font--catalog__card-desc();
-  text-align: left;
-
-  &--show-more {
-    text-align: center;
-    width: 220px;
-    margin-bottom: 21px;
-  }
+.catalog__card-link {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .catalog {
-    width: @tablet-container-width;
-    padding-top: 90px;
+    width: @tablet-width;
+    margin-bottom: 68px;
+  }
+
+  .catalog__title {
+    padding-top: 65px;
+    padding-bottom: 90px;
+    padding-left: 30px;
+    padding-right: 31px;
+    border-bottom: 0;
   }
 
   .catalog__list {
+    width: @tablet-container-width;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 324px 324px;
     column-gap: 60px;
+    row-gap: 142px;
   }
 
   .catalog__card {
-    width: 324px;
-    padding-top: 19px;
-    padding-bottom: 25px;
-    border-bottom: 1px #d9d9d9 solid;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background: @second-color;
+    padding-top: 161px;
+    padding-right: 37px;
+    padding-bottom: 39px;
+    padding-left: 39px;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
 
     &--show-more {
-      width: 324px;
-      padding-top: 25px;
+      background: @main-color;
+      border: 2px @second-color solid;
+    }
+  }
+
+  .catalog__card-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .catalog__card-container-inner {
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-bottom: 33px;
+  }
+
+  .catalog__card-img {
+    margin-bottom: 0;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25%);
+
+    &--show-more {
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .catalog__card-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    column-gap: 80px;
+    row-gap: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px @special-border-color solid;
+  }
+
+  .catalog__card-item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  .catalog__card-title {
+    width: 173px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 24px; @color: @catalog-title-color);
+    text-align: center;
+
+    br {
+      display: block;
+    }
+  }
+
+  .catalog__card-term {
+    .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @main-text--color);
+  }
+
+  .catalog__card-desc {
+    .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @main-text--color);
+  }
+
+  .catalog__card-description {
+    width: 100%;
+
+    &--show-more .catalog__card-title {
+      .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 22px; @color: @second-title-color);
+      margin-bottom: 23px;
+    }
+
+    &--show-more .catalog__card-desc {
+      .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @main-text--color);
+      margin-bottom: 87px;
     }
   }
 }
@@ -94,24 +254,23 @@
 @media (min-width: @desktop-width) {
   .catalog {
     width: @desktop-container-width;
-    padding-top: 90px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
+
+  .catalog__title {
+    padding-top: 78px;
+    padding-bottom: 165px;
   }
 
   .catalog__list {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
   }
 
-  .catalog__card {
-    width: 245px;
-    padding-top: 19px;
-    padding-bottom: 25px;
-    border-bottom: 1px #d9d9d9 solid;
-
-    &--show-more {
-      width: 245px;
-      padding-top: 25px;
-    }
+  .catalog__card-item {
+    column-gap: 50px;
   }
 }

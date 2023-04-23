@@ -2,4 +2,16 @@
 
 .button-social {
   display: flex;
+
+  &:hover .button-social__svg {
+    fill: @accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.button-social__svg {
+  fill: @social-color;
 }
