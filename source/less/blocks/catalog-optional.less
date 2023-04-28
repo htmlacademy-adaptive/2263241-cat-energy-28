@@ -80,11 +80,15 @@
   position: relative;
   min-height: 290px;
   box-sizing: border-box;
-  background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../img/mobile/cat-in-bag-mobile.jpg");
+  background-image: url("../img/catalog-bonus-back-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog-bonus-back-mobile@2x.jpg");
+  }
   background-color: fade(#68b738, 85%);
   background-position: top, top;
   background-repeat: no-repeat;
-  background-size: 280px 290px, 280px 290px;
+  background-size: @mobile-container-width 290px;
   padding-top: 189px;
   padding-bottom: 10px;
   padding-left: 58px;
@@ -120,6 +124,9 @@
     top: 20px;
   }
 
+  .catalog-optional__bonus-text {
+    text-align: left;
+  }
 
   .catalog-optional__title {
     width: 339px;
@@ -185,12 +192,18 @@
   }
 
   .catalog-optional__bonus {
-    min-height: 200px;
+    min-height: 100%;
     width: 100%;
     padding-top: 71px;
     padding-right: 124px;
     padding-bottom: 69px;
     padding-left: 422px;
+    background-image: url("../img/catalog-bonus-back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-bonus-back-tablet@2x.jpg");
+    }
+    background-size: @tablet-container-width 200px;
   }
 
   .catalog-optional__bonus::before {
@@ -260,6 +273,12 @@
     padding-right: 43px;
     padding-bottom: 42px;
     padding-left: 41px;
+    background-image: url("../img/catalog-bonus-back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-bonus-back-desktop@2x.jpg");
+    }
+    background-size: 245px 289px;
   }
 
   .catalog-optional__bonus::before {

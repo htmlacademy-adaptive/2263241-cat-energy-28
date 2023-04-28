@@ -49,6 +49,25 @@
     padding-top: 69px;
     width: @desktop-container-width;
     margin: 0 auto;
+    position: relative;
+  }
+
+  .main-header--index::before {
+    content: "";
+    background-image: url("../img/index-background-desktop.jpg"), linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85));
+    }
+    background-size: 720px 696px, 720px 696px;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 696px;
+    position: absolute;
+    top: 0;
+    right: -110px;
+    z-index: -2;
   }
 
   .main-header__logo-wrapper {

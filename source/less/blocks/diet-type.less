@@ -1,89 +1,25 @@
 @import url("../global/mixins.less");
 
-.diet-type {
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
 .diet-type__list {
   .list-reset();
   width: 100%;
-}
-
-.diet-type__item {
-  position: relative;
-  background-color: @second-color;
-  padding-left: 20px;
-  padding-right: 33px;
-  padding-top: 30px;
-  padding-bottom: 18px;
 }
 
 .diet-type__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.diet--slim .diet__container::after {
-  content: "";
-  background-image: url("../img/icons/cat-slim.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50px 53px;
-  width: 50px;
-  height: 53px;
-  position: absolute;
-  top: 22px;
-  left: 21px;
-}
-
-.diet--pro .diet__container::after {
-  content: "";
-  background-image: url("../img/icons/cat-pro.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 67px 50px;
-  width: 67px;
-  height: 50px;
-  position: absolute;
-  top: 24px;
-  left: 13px;
-}
-
 @media (min-width: @tablet-width) {
-  .diet-type {
-    padding-top: 0;
-    padding-bottom: 45px;
-  }
-
   .diet-type__item:not(:last-child) {
     margin-bottom: 30px;
-  }
-
-  .diet-type__item {
-    padding-top: 73px;
-    padding-right: 62px;
-    padding-bottom: 53px;
-    padding-left: 53px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .diet-type {
-    padding-top: 82px;
-    padding-bottom: 71px;
-  }
-
   .diet-type__list {
     display: grid;
     grid-template-columns: 570px 570px;
     column-gap: 80px;
-  }
-
-  .diet-type__item {
-    padding-top: 77px;
-    padding-right: 61px;
-    padding-bottom: 55px;
-    padding-left: 52px;
   }
 
   .diet-type__item:not(:last-child) {
