@@ -6,11 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body wrapper">
 
-  <header class="main-header">
+  <header class="main-header main-header--index">
     <div class="main-header__logo-wrapper">
       <a class="main-header__logo">
         <img class="main-header__logo-image logo-image" src="img/icons/logo-mobile.svg" width="33" height="38"
@@ -41,19 +45,25 @@
   <main class="main-index main-wrapper">
     <h1 class="visually-hidden">Кэт Энерджи - Подбор оптимального питания для котов</h1>
 
-    <section class="select-program ">
+    <section class="main-index__select-program select-program">
       <div class="select-program__container">
         <div class="select-program__text-container">
           <h2 class="select-program__title">Функциональное питание для котов</h2>
           <p class="select-program__slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="select-program__image" src="img/mobile/index-can-mobile.png" width="280" height="270"
+        <p class="select-program__image-wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x" width="552" height="449">
+          <source media="(min-width: 769px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x" width="709" height="609">
+        <img class="select-program__image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270"
           alt="Банка с кормом.">
+        </picture>
+      </p>
         <a class="select-program__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
-    <section class="diet-type container">
+    <section class="main-index__diet-type diet-type container">
       <h2 class="visually-hidden">Варианты питания.</h2>
       <ul class="diet-type__list ">
         <li class="diet-type__item  diet diet--slim">
@@ -76,7 +86,7 @@
       </ul>
     </section>
 
-    <section class="work-principle">
+    <section class="main-index__work-principle work-principle">
       <div class="container">
         <h2 class="work-principle__title section-title section-title--index">Как это работает</h2>
         <ul class="work-principle__list">
@@ -101,7 +111,7 @@
       </div>
     </section>
 
-    <section class="result">
+    <section class="main-index__result result">
       <div class="result__wrapper container">
         <div class="result__container-main">
           <h2 class="result__title section-title">Живой пример</h2>
@@ -128,16 +138,27 @@
           </div>
         </div>
 
-        <div class="slider-cats">
-          <figure class="slider-cats__images">
-            <!-- <img class="slider-cats__before-cat" src="img/mobile/cat-before-mobile.png" width="280" height="256"
-              alt="Толстый котик.">
-            <img class="slider-cats__after-cat" src="img/mobile/cat-after-mobile.png" width="280" height="256"
-              alt="Худой котик."> -->
-            <img class="slider" src="img/mobile/cat-slider-mobile.png" width="280" height="256" alt="Слайдер.">
-            <figcaption class="visually-hidden">Слайдер с толстым и худым котиками.</figcaption>
-          </figure>
+        <div class="result__slider-cats slider-cats">
+          <span class="visually-hidden">Слайдер с толстым и худым котиками.</span>
+          <div class="slider-cats__before">
+            <picture>
+              <source media="(min-width: 769px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider-cats_image" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый котик.">
+            </picture>
+          </div>
+          <div class="slider-cats__after">
+            <picture>
+              <source media="(min-width: 769px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider-cats_image" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Толстый котик.">
+            </picture>
+          </div>
           <button class="slider-cats__toggle" type="button">
+            <svg  class="slider-cats__toggle-svg" aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+              <path d="M16 11L8 20L16 29V11Z" fill="#666666"/>
+              <path d="M32 20L24 11V29L32 20Z" fill="#666666"/>
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+              </svg>
             <span class="visually-hidden">Переключатель слайдера.</span>
           </button>
         </div>

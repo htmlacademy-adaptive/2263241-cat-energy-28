@@ -1,9 +1,5 @@
 @import url("../global/global.less");
 
-.work-principle {
-  padding-bottom: 53px;
-}
-
 .work-principle__title {
   margin: 0;
   margin-bottom: 40px;
@@ -23,36 +19,108 @@
   margin: 0;
   padding-left: 80px;
   text-align: left;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
   min-height: 60px;
-}
-
-.work-principle__item--useful .work-principle__description {
-  background-image: url("../img/icons/principle-useful.svg");
-}
-
-.work-principle__item--release-form .work-principle__description {
-  background-image: url("../img/icons/principle-release.svg");
-}
-
-.work-principle__item--mealtime .work-principle__description {
-  background-image: url("../img/icons/principle-mealtime.svg");
-}
-
-.work-principle__item--result .work-principle__description {
-  background-image: url("../img/icons/principle-result.svg");
 }
 
 .work-principle__description br {
   display: none;
 }
 
+.work-principle__description::before {
+  position: absolute;
+  content: "";
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.work-principle__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @accent-color;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+  }
+
+  &--useful .work-principle__description::before {
+    background-image: url("../img/icons/principle-useful.svg");
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    top: 14px;
+    left: 14px;
+  }
+
+  &--release-form .work-principle__description::before {
+    background-image: url("../img/icons/principle-release.svg");
+    background-size: 29px 26px;
+    width: 29px;
+    height: 26px;
+    top: 17px;
+    left: 15px;
+  }
+
+  &--mealtime .work-principle__description::before {
+    background-image: url("../img/icons/principle-mealtime.svg");
+    background-size: 25px 30px;
+    width: 29px;
+    height: 26px;
+    top: 15px;
+    left: 17px;
+  }
+
+  &--result .work-principle__description::before {
+    background-image: url("../img/icons/principle-result.svg");
+    background-size: 26px 31px;
+    width: 26px;
+    height: 31px;
+    top: 14px;
+    left: 17px;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .work-principle__item {
+    counter-increment: slide-counter;
+    min-height: 240px;
+
+    &::before {
+      background-size: 80px 80px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--useful .work-principle__description::before {
+      top: 24px;
+      left: 24px;
+    }
+
+    &--release-form .work-principle__description::before {
+      top: 25px;
+      left: 27px;
+    }
+
+    &--mealtime .work-principle__description::before {
+      top: 25px;
+      left: 26px;
+    }
+
+    &--result .work-principle__description::before {
+      top: 25px;
+      left: 25px;
+    }
+  }
+
   .work-principle {
     padding-bottom: 47px;
-    border: 1px #e6e6e6 solid;
+    border-bottom: 1px #e6e6e6 solid;
   }
 
   .work-principle__title {
@@ -68,11 +136,6 @@
     counter-reset: slide-counter;
   }
 
-  .work-principle__item {
-    counter-increment: slide-counter;
-    position: relative;
-    min-height: 240px;
-  }
 
   .work-principle__item::after {
     position: absolute;

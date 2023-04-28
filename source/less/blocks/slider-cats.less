@@ -1,0 +1,79 @@
+@import url("../global/global.less");
+
+.slider-cats_image {
+  max-width: fit-content;
+}
+
+.slider-cats {
+  margin: 0 auto;
+  width: @mobile-container-width;
+  display: flex;
+  position: relative;
+}
+
+.slider-cats__before {
+  display: flex;
+  width: 140px;
+  overflow: hidden;
+}
+
+.slider-cats__after {
+  display: flex;
+  width: 140px;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.slider-cats__toggle-svg {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  // fill: @social-color;
+}
+
+.slider-cats__toggle {
+  position: absolute;
+  width: 4px;
+  height: 256px;
+  padding: 0;
+  border: none;
+  background-color: @social-color;
+  z-index: 1;
+  top: 0;
+  left: 140px;
+  transform: translateX(-50%);
+
+  &:hover {
+    background-color: @accent-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .slider-cats {
+    width: 560px;
+  }
+
+  .slider-cats__before {
+    width: 280px;
+  }
+
+  .slider-cats__after {
+    width: 280px;
+  }
+
+  .slider-cats__toggle {
+    height: 512px;
+    left: 280px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider-cats {
+    margin: 0;
+  }
+}

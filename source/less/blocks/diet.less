@@ -7,6 +7,54 @@
   border-bottom: 1px @section-border-color solid;
 }
 
+.diet {
+  background-color: @second-color;
+  padding-left: 20px;
+  padding-right: 33px;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @accent-color;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    top: 24px;
+    left: 22px;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    content: "";
+    background-image: url("../img/icons/cat-slim.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px 53px;
+    width: 50px;
+    height: 53px;
+    position: absolute;
+    top: 22px;
+    left: 21px;
+  }
+
+  &--pro::after {
+    content: "";
+    background-image: url("../img/icons/cat-pro.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 67px 50px;
+    width: 67px;
+    height: 50px;
+    position: absolute;
+    top: 24px;
+    left: 13px;
+  }
+}
+
+
 .diet__title {
   padding: 0;
   margin: 0;
@@ -25,6 +73,37 @@
 }
 
 @media (min-width: @tablet-width) {
+  .diet {
+    padding-top: 73px;
+    padding-right: 262px;
+    padding-bottom: 53px;
+    padding-left: 53px;
+
+    &::before {
+      background-size: 200px 200px;
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 446px;
+    }
+
+    &--slim::after {
+      background-size: 140px 194px;
+      width: 140px;
+      height: 194px;
+      top: 81px;
+      left: 476px;
+    }
+
+    &--pro::after {
+      background-size: 268px 112px;
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: 412px;
+    }
+  }
+
   .diet__container {
     width: 340px;
     padding-right: 254px;
@@ -49,6 +128,37 @@
 
 
 @media (min-width: @desktop-width) {
+  .diet {
+    padding-top: 77px;
+    padding-right: 61px;
+    padding-bottom: 55px;
+    padding-left: 52px;
+
+    &::before {
+      background-size: 100px 100px;
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &--slim::after {
+      background-size: 70px 97px;
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
+
+    &--pro::after {
+      background-size: 134px 56px;
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
+  }
+
   .diet__container {
     width: 457px;
     padding-right: 0;
