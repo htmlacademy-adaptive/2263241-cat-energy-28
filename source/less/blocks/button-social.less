@@ -2,9 +2,27 @@
 
 .button-social {
   display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @social-color;
+  background-size: 29px 22px;
+  width: 29px;
+  height: 22px;
 
-  &:hover .button-social__svg {
-    fill: @accent-color;
+  &--telegram {
+    mask-image: url("../img/icons/stack.svg#social-telegram");
+  }
+
+  &--youtube {
+    mask-image: url("../img/icons/stack.svg#social-youtube");
+  }
+
+  &--vkontakte {
+    mask-image: url("../img/icons/stack.svg#social-vkontakte");
+  }
+
+  &:hover {
+    background-color: @accent-color;
   }
 
   &:active {

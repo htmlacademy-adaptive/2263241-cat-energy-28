@@ -8,6 +8,21 @@
 
 .footer-logo-title__link {
   display: flex;
+  mask-image: url("../img/icons/stack.svg#logo-title");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @title-color;
+  background-size: 101px 18px;
+  width: 101px;
+  height: 18px;
+
+  &[href]:hover {
+    background-color: @logo-footer-hover;
+  }
+
+  &[href]:active {
+    background-color: @logo-footer-active;
+  }
 }
 
 
