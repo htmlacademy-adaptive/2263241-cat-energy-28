@@ -1,0 +1,32 @@
+
+.logo__desktop {
+  width: 173px;
+}
+
+.logo[href] {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo__mobile {
+    display: none;
+  }
+
+  .logo__desktop {
+    height: 100%;
+    width: 174px;
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__desktop {
+    width: 202px;
+  }
+}

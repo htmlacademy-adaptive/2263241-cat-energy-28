@@ -36,19 +36,51 @@
   position: relative;
 }
 
-.contact-owner__input-container svg {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-}
-
 .contact-owner__label {
   .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18x; @color: @main-text--color);
   text-transform: uppercase;
   margin-right: 10px;
   flex-shrink: 1;
 }
+
+.contact-owner__input-container:has(.input[type="email"])::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+  mask-image: url("../img/icons/stack.svg#email-svg");
+  background-color: @catalog-title-color;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 18px 14px;
+  width: 18px;
+  height: 14px;
+}
+
+.contact-owner__input-container:has(.input[type="text"])::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+  mask-image: url("../img/icons/stack.svg#phone-svg");
+  background-color: @catalog-title-color;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.contact-owner__input-container:has(.input:hover)::after {
+  background-color: @accent-color;
+}
+
+.contact-owner__input-container:has(.input:invalid)::after {
+  background-color: @status-error;
+}
+
 
 .contact-owner__input {
   flex-grow: 1;
@@ -69,10 +101,6 @@
   .contact-owner__label {
     .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @main-text--color);
     margin-right: 20px;
-  }
-
-  .contact-owner__input-container svg {
-    right: 21px;
   }
 
   .contact-owner::before {
