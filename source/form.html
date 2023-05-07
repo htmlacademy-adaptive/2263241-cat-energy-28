@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Подбор программы</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -16,11 +16,27 @@
   <header class="main-header">
     <div class="main-header__logo-wrapper">
       <a class="main-header__logo logo" href="index.html">
-        <!-- картинка иконки для mobile -->
-        <img class="logo__mobile" src="img/icons/logo-mobile.svg" width="34" height="38"
-          alt="Интернет-магазин Кэт Энерджи.">
-        <img class="logo__desktop" src="img/icons/logo-adaptive.svg" width="202" height="59"
-          alt="Интернет-магазин Кэт Энерджи.">
+        <div class="logo__icon">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg"
+              width="71" height="59">
+            <source media="(min-width: 769px)" srcset="img/logo-tablet.svg"
+              width="61" height="51">
+            <img class="logo__icon-img" src="img/logo-mobile.svg" width="34" height="38"
+                alt="Интернет-магазин Кэт Энерджи.">
+          </picture>
+          </div>
+
+          <div class="logo__title">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-title.svg"
+                width="117" height="21">
+              <source media="(min-width: 769px)" srcset="img/logo-title.svg"
+                width="101" height="18">
+              <img class="logo__title-img" src="img/logo-title.svg" width="101" height="18"
+                  alt="Интернет-магазин Кэт Энерджи.">
+            </picture>
+          </div>
       </a>
     </div>
     <nav class="main-header__nav main-nav main-nav--opened main-nav--nojs">

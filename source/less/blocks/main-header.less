@@ -5,12 +5,14 @@
 
 .main-header__logo-wrapper {
   position: relative;
-  padding: 3px 20px;
+  padding: 0 20px;
+  padding-top: 10px;
+  padding-bottom: 17px;
   border-bottom: 1px #e6e6e6 solid;
 }
 
 .main-header__logo {
-  width: 202px;
+  width: 191px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,11 +60,12 @@
 
   .main-header--index::before {
     content: "";
-    background-image: url("../img/index-background-desktop.jpg"), linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85));
+    background-image: url("../img/index-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85));
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
+    background-color: fade(@accent-color, 85%);
     background-size: 720px 696px, 720px 696px;
     background-position: center, center;
     background-repeat: no-repeat;
