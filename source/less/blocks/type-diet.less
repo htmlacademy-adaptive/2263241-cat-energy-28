@@ -2,8 +2,10 @@
 
 .type-diet {
   box-sizing: border-box;
-  padding-bottom: 25px;
+  padding-right: 0;
+  padding-bottom: 21px;
   padding-top: 28px;
+  padding-left: 20px;
 }
 
 .type-diet__list {
@@ -13,12 +15,12 @@
 }
 
 .type-diet__item:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .type-diet__label {
   text-transform: uppercase;
-  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18x; @color: @catalog-title-color);
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @catalog-title-color);
 }
 
 .type-diet__control {
@@ -70,10 +72,31 @@
 @media (min-width: @tablet-width) {
   .type-diet {
     width: 630px;
-    padding-top: 30px;
+    padding-top: 29px;
     padding-right: 28px;
-    padding-bottom: 30px;
+    padding-bottom: 29px;
     padding-left: 28px;
+  }
+
+  .type-diet__list {
+    width: 100%;
+  }
+
+  .type-diet__label {
+    .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @catalog-title-color);
+    padding-left: 15px;
+  }
+
+  .type-diet__mark {
+    left: 0;
+    top: -6px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .type-diet__input:checked + .type-diet__mark::before {
+    width: 17px;
+    height: 17px;
   }
 }
 

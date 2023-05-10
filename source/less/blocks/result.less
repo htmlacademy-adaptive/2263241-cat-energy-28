@@ -55,6 +55,7 @@
   width: 87px;
   box-sizing: border-box;
   margin: 0;
+  margin-top: -12px;
   padding-top: 2px;
   padding-bottom: 9px;
   padding-left: 14px;
@@ -62,7 +63,6 @@
   .set-font(@font-family: @font-text; @font-size: 12px; @font-weight: 400; @line-height: 12px; @color: @main-text--color);
   text-align: center;
   align-self: center;
-  margin-top: -12px;
   background-color: @section-background-color;
 }
 
@@ -76,9 +76,9 @@
 
 @media (min-width: @tablet-width) {
   .result {
-    background: linear-gradient(to bottom, @main-color 55%, @second-color 55% 100%);
+    background: linear-gradient(to bottom, @main-color 55.5%, @second-color 55.5%);
     padding-top: 0;
-    padding-bottom: 101px;
+    padding-bottom: 98px;
   }
 
   .result__container-main {
@@ -87,11 +87,11 @@
 
   .result__title {
     width: 100%;
-    margin-bottom: 63px;
+    margin-bottom: 62px;
   }
 
   .result__text {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 24px; @color: @main-text--color);
   }
 
@@ -120,6 +120,7 @@
 
   .result__description {
     padding: 5px 8px;
+    margin-top: -14px;
     width: fit-content;
     .set-font(@font-family: @font-text; @font-size: 14px; @font-weight: 400; @line-height: 14px; @color: @main-text--color);
     background-color: @main-color;
@@ -131,6 +132,8 @@
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
+    padding-top: 13px;
   }
 
   .result__expenses-text {
@@ -159,7 +162,8 @@
   }
 
   .result__text {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
+    width: 433px;
   }
 
   .result__container {
@@ -169,7 +173,7 @@
 
   .result__list {
     width: 366px;
-    margin-bottom: 47px;
+    margin-bottom: 49px;
   }
 
   .result__description {
@@ -180,12 +184,13 @@
     text-align: left;
     display: flex;
     flex-direction: row;
-    width: 327px;
+    width: 328px;
+    padding-top: 0;
   }
 
   .result__expenses-text {
     margin-bottom: 0;
-    margin-right: 63px;
+    margin-right: 66px;
     max-width: 180px;
   }
 }

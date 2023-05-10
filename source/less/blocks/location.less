@@ -1,9 +1,54 @@
 @import url("../global/global.less");
 
+.location {
+  width: @mobile-width;
+  min-height: 362px;
+}
+
 .location__iframe {
   position: absolute;
+  background-color: @section-background-color;
+  background-image: url("../img/location-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location-mobile@2x.jpg");
+  }
+  background-size: @mobile-width 362px;
+  background-repeat: no-repeat;
+  background-position: top left;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .location {
+    width: @tablet-width;
+    height: 400px;
+  }
+
+  .location__iframe {
+    background-image: url("../img/location-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-tablet@2x.jpg");
+    }
+    background-size: @tablet-width 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location {
+    width: @desktop-width;
+  }
+
+  .location__iframe {
+    background-image: url("../img/location-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-desktop@2x.jpg");
+    }
+    background-size: @desktop-width 400px;
+  }
 }

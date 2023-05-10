@@ -17,12 +17,13 @@
 .contact-owner::before {
   position: absolute;
   content: "";
-  width: 100%;
   height: 2px;
   background-color: @accent-color;
-  top: -60px;
+  top: -72px;
   left: 0;
   z-index: -1;
+  width: 100vw;
+  box-shadow: 100vw 0 0 0 @accent-color;
 }
 
 .contact-owner__input-container:not(:last-child) {
@@ -37,17 +38,17 @@
 }
 
 .contact-owner__label {
-  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18x; @color: @main-text--color);
+  .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @main-text--color);
   text-transform: uppercase;
   margin-right: 10px;
   flex-shrink: 1;
 }
 
-.contact-owner__input-container:has(.input[type="email"])::after {
+.contact-owner__icon-email::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 21px;
+  right: 16px;
   transform: translateY(-50%);
   mask-image: url("../img/stack.svg#letter-icon");
   background-color: @catalog-title-color;
@@ -58,11 +59,11 @@
   height: 14px;
 }
 
-.contact-owner__input-container:has(.input[type="text"])::after {
+.contact-owner__icon-phone::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 21px;
+  right: 16px;
   transform: translateY(-50%);
   mask-image: url("../img/stack.svg#phone-icon");
   background-color: @catalog-title-color;
@@ -73,18 +74,19 @@
   height: 16px;
 }
 
-.contact-owner__input-container:has(.input:hover)::after {
+.contact-owner__input:focus + .contact-owner__icon::after {
   background-color: @accent-color;
 }
 
-.contact-owner__input-container:has(.input:invalid)::after {
+.contact-owner__input:invalid + .contact-owner__icon::after {
   background-color: @status-error;
 }
 
-
 .contact-owner__input {
   flex-grow: 1;
-  padding-right: 33px;
+  padding-right: 40px;
+  padding-left: 14px;
+  width: 202px;
 }
 
 @media (min-width: @tablet-width) {
@@ -103,10 +105,22 @@
     margin-right: 20px;
   }
 
+  .contact-owner__input {
+    padding-left: 19px;
+  }
+
+  .contact-owner__icon::after {
+    right: 19px;
+  }
+
+  .contact-owner__input-container:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   .contact-owner::before {
     top: -90px;
-    left: -38vw;
-    width: 139vw;
+    left: auto;
+    right: 0;
   }
 }
 
@@ -126,5 +140,9 @@
 
   .contact-owner__input-container {
     width: 100%;
+  }
+
+  .contact-owner__input-container:not(:last-child) {
+    margin-bottom: 0;
   }
 }

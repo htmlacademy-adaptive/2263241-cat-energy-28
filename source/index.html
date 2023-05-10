@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page page--index" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" as="font">
 </head>
 
 <body class="page__body wrapper">
@@ -28,8 +29,8 @@
 
         <div class="logo__title">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-title.svg" width="117" height="21">
-            <source media="(min-width: 769px)" srcset="img/logo-title.svg" width="101" height="18">
+            <source media="(min-width: 1440px)" srcset="img/logo-title-tablet.svg" width="117" height="21">
+            <source media="(min-width: 769px)" srcset="img/logo-title-tablet.svg" width="101" height="18">
             <img class="logo__title-img" src="img/logo-title.svg" width="101" height="18"
               alt="Интернет-магазин Кэт Энерджи.">
           </picture>
@@ -55,7 +56,7 @@
 
   </header>
   <main class="main-index main-wrapper">
-    <h1 class="visually-hidden">Кэт Энерджи - Подбор оптимального питания для котов</h1>
+    <h1 class="visually-hidden">Кэт Энерджи - Подбор оптимального питания для котов.</h1>
 
     <section class="main-index__select-program select-program">
       <div class="select-program__container">
@@ -66,17 +67,14 @@
         <p class="select-program__image-wrapper">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x" width="552" height="449">
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x"
-              width="552" height="449">
+              srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
 
             <source type="image/webp" media="(min-width: 769px)"
-              srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x" width="709" height="609">
-            <source media="(min-width: 769px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x"
-              width="709" height="609">
+              srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source media="(min-width: 769px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
 
-            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x" width="280"
-              height="270">
+            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
             <img class="select-program__image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x"
               width="280" height="270" alt="Банка с кормом.">
           </picture>
@@ -125,7 +123,8 @@
               обычной еды на наше функциональное питание.</p>
           </li>
           <li class="work-principle__item work-principle__item--result ">
-            <p class="work-principle__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            <p class="work-principle__description">Уже через месяц наслаждайтесь изменениями к лучшему&nbsp; <br> вашего
+              питомца!
             </p>
           </li>
         </ul>
@@ -163,18 +162,24 @@
           <span class="visually-hidden">Слайдер с толстым и худым котиками.</span>
           <div class="slider-cats__before">
             <picture>
-              <source media="(min-width: 769px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x"
-                width="560" height="512">
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/cat-before-tablet.webp 1x, img/cat-before-tablet@2x.webp 2x">
+              <source media="(min-width: 769px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
+
+              <source type="image/webp" srcset="img/cat-before-mobile.webp 1x, img/cat-before-mobile@2x.webp 2x">
               <img class="slider-cats__image" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x"
                 width="280" height="256" alt="Толстый котик.">
             </picture>
           </div>
           <div class="slider-cats__after">
             <picture>
-              <source media="(min-width: 769px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x"
-                width="560" height="512">
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/cat-after-tablet.webp 1x, img/cat-after-tablet@2x.webp 2x">
+              <source media="(min-width: 769px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
+
+              <source type="image/webp" srcset="img/cat-after-mobile.webp 1x, img/cat-after-mobile@2x.webp 2x">
               <img class="slider-cats__image" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x"
-                width="280" height="256" alt="Толстый котик.">
+                width="280" height="256" alt="Тонкий котик.">
             </picture>
           </div>
           <span class="slider-cats__toggle-shutter">

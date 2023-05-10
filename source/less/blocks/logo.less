@@ -1,7 +1,3 @@
-.logo__desktop {
-  width: 173px;
-}
-
 .logo[href] {
   &:hover {
     opacity: 0.8;
@@ -22,15 +18,22 @@
 }
 
 @media (min-width: @tablet-width) {
-  .logo__desktop {
-    height: 100%;
-    width: 174px;
-    display: flex;
+  .logo__icon-img {
+    width: 61px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .logo__desktop {
-    width: 202px;
+  .logo__icon-img {
+    width: 71px;
+  }
+
+  .logo__title-img {
+    padding-top: 0;
+    width: 117px;
+  }
+
+  .logo__title {
+    padding-top: 22px;
   }
 }
