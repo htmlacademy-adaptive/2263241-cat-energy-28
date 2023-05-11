@@ -49,12 +49,16 @@
   transform: translate(-50%, -50%);
   width: 13px;
   height: 13px;
-  background-color: #68b738;
+  background-color: @accent-color;
   border-radius: 50%;
 }
 
 .type-diet__input:not(:disabled):hover + .type-diet__mark {
   border-color: @input-accent-border-color;
+}
+
+.type-diet__input:not(:disabled):focus-visible + .type-diet__mark {
+  border-color: @accent-color;
 }
 
 .type-diet__input:disabled + .type-diet__mark {
