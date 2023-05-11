@@ -31,7 +31,7 @@
 }
 
 .main-nav__item {
-  border-bottom: 2px #e6e6e6 solid;
+  border-bottom: 1px #e6e6e6 solid;
 }
 
 .main-nav__item a[href] {
@@ -111,7 +111,7 @@
   //не важно открыто было меню или закрыто на мобилке, на планшете оно flex
   .main-nav--closed .main-nav__list,
   .main-nav--opened .main-nav__list {
-    width: 478px;
+    width: 479px;
   }
 
   .main-nav__item {
@@ -130,6 +130,8 @@
 
   .main-nav__link {
     .set-font(@font-family: @font-title; @font-size:20px; @font-weight:400; @line-height:30px; @color: @title-color);
+    padding-top: 11px;
+    padding-bottom: 9px;
   }
 
   .main-nav--index .main-nav__link {

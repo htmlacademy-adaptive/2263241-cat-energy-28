@@ -2,8 +2,8 @@
 
 .input {
   box-sizing: border-box;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 9px;
   padding-left: 20px;
   padding-right: 20px;
   border: 1px @input-border-color solid;
@@ -11,6 +11,8 @@
   text-transform: uppercase;
   .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 18px; @color: @main-text--color);
   position: relative;
+  appearance: none;
+  min-height: 44px;
 
   &:hover {
     border-color: @special-border-color;
@@ -32,7 +34,9 @@
 }
 
 @media (min-width: @tablet-width) {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @main-text--color);
+  .input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @main-text--color);
+  }
 }

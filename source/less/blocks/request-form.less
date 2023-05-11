@@ -5,11 +5,10 @@
 }
 
 .request-form__parameters-container {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .request-form__parameters {
-  margin-bottom: 28px;
   padding-bottom: 24px;
   border-bottom: 1px @section-border-color solid;
 }
@@ -18,16 +17,15 @@
   border: none;
   border-bottom: 1px @section-border-color solid;
   margin: 0 auto;
-  margin-bottom: 26px;
 }
 
 .request-form__comment {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .request-form__options {
   .fieldset-reset();
-  margin-bottom: 34px;
+  margin-bottom: 37px;
 }
 
 .request-form__button-container {
@@ -54,7 +52,7 @@
   }
 
   .request-form__parameters {
-    margin-bottom: 72px;
+    margin-bottom: 74px;
     padding-bottom: 0;
     border-bottom: none;
   }
@@ -73,7 +71,7 @@
   }
 
   .request-form__options {
-    margin-bottom: 52px;
+    margin-bottom: 58px;
   }
 
   .request-form__button-container {
@@ -97,6 +95,8 @@
     flex-grow: 1;
     text-align: left;
     padding: 0;
+    align-self: flex-start;
+    padding-top: 15px;
     .set-font(@font-family: @font-text; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @title-color);
   }
 }
@@ -126,14 +126,20 @@
   }
 
   .request-form__options {
-    margin-bottom: 61px;
+    margin-bottom: 66px;
+  }
+
+  .request-form__required {
+    align-self: center;
+    padding-top: 0;
+    padding-left: 4px;
   }
 
   .request-form__button-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 72px;
+    margin-bottom: 81px;
   }
 
   .request-form__button {

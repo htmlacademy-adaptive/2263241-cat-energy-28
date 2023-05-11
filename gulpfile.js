@@ -24,7 +24,6 @@ export const styles = () => {
       csso()
     ]))
     .pipe (rename('style.min.css'))
-    //.pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -58,7 +57,7 @@ const copyImages = () => {
 }
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}','!source/img/favicons')
   .pipe(squoosh({webp:{}}))
   .pipe(gulp.dest('build/img'))
 }
@@ -82,7 +81,8 @@ const copy = (done) => {
   gulp.src([
   "source/fonts/**/*.{woff2,woff}",
   "source/*.ico",
-  "source/*.webmanifest",
+  "source/img/favicons/*.*",
+  "source/*.webmanifest"
   ], { base: "source"})
   .pipe(gulp.dest("build"))
   done();
@@ -121,11 +121,6 @@ const watcher = () => {
   gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
-
-
-// export default gulp.series(
-//   html,styles, server, watcher
-// );
 
 export const build = gulp.series(
   clean,
