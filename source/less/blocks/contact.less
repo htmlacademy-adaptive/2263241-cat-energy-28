@@ -9,13 +9,17 @@
 }
 
 .contact__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 10px;
   width: @mobile-container-width;
   margin: 0 auto;
 }
 
 .contact__partnership {
-  width: 139px;
+  grid-column: 1/2;
+  grid-row: 1/2;
   padding: 0;
   margin: 0;
   .set-font (@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 20px; @color: @second-title-color);
@@ -24,7 +28,8 @@
 }
 
 .contact__address {
-  width: 139px;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .contact__address-street {
@@ -50,20 +55,17 @@
   }
 
   .contact__container {
-    display: flex;
-    justify-content: space-between;
     width: 628px;
-    margin: 0 auto;
+    column-gap: 296px;
+    grid-template-columns: 172px 160px;
   }
 
   .contact__partnership {
-    width: 172px;
     .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 26px; @color: @second-title-color);
     padding-top: 3px;
   }
 
   .contact__address {
-    width: 160px;
     display: flex;
     flex-direction: column;
   }
@@ -96,19 +98,14 @@
   }
 
   .contact__container {
-    display: flex;
-    justify-content: space-between;
     margin: 0;
     width: 100%;
+    column-gap: 87px;
+    grid-template-columns: 163px 175px;
   }
 
   .contact__partnership {
-    width: 163px;
     .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 26px; @color: @second-title-color);
-  }
-
-  .contact__address {
-    width: 175px;
   }
 
   .contact__address-street {

@@ -4,20 +4,44 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 4px 0;
-  padding-right: 42px;
+  padding-right: 50px;
   background-color: inherit;
   .set-font(@font-family: @font-title; @font-size: 16px; @font-weight: 400; @line-height: 16px; @color: @title-color);
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-  background-image: url("../img/stack.svg#arrow-right");
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 24px 12px;
+  position: relative;
 
-  &:hover {
-    opacity: 0.6;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: @title-color;
+    top: 10px;
+    left: 101px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/stack.svg#arrow-right");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 7px 12px;
+    width: 7px;
+    height: 12px;
+    top: 5px;
+    left: 118px;
+  }
+
+  &:hover.button-diet::before {
+    width: 26px;
+  }
+
+  &:hover.button-diet::after {
+    left: 126px;
   }
 
   &:active {
@@ -29,13 +53,31 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  padding-right: 49px;
-}
-
 @media (min-width: @tablet-width) {
   .button-diet {
     .set-font(@font-family: @font-title; @font-size: 20px; @font-weight: 400; @line-height: 30px; @color: @title-color);
     padding-right: 52px;
+
+    &::before {
+      top: 18px;
+      left: 131px;
+    }
+
+    &::after {
+      top: 13px;
+      left: 148px;
+    }
+
+    &:hover.button-diet::before {
+      width: 26px;
+    }
+
+    &:hover.button-diet::after {
+      left: 156px;
+    }
   }
+}
+
+@media (min-width: @desktop-width) {
+  padding-right: 49px;
 }
