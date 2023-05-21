@@ -1,13 +1,13 @@
 @import url("../global/global.less");
 
 .location {
-  width: @mobile-width;
+  width: 100%;
   min-height: 362px;
 }
 
 .location__iframe {
   position: absolute;
-  background-color: @section-background-color;
+  background-color: @second-color;
   background-image: url("../img/location-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
@@ -15,7 +15,7 @@
   }
   background-size: @mobile-width 362px;
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,7 +24,6 @@
 
 @media (min-width: @tablet-width) {
   .location {
-    width: @tablet-width;
     height: 400px;
   }
 
@@ -39,10 +38,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .location {
-    width: @desktop-width;
-  }
-
   .location__iframe {
     background-image: url("../img/location-desktop.jpg");
 

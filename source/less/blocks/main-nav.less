@@ -23,15 +23,20 @@
 
 .main-nav__list {
   .list-reset();
-  width: @mobile-width;
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-nav__item {
   border-bottom: 1px #e6e6e6 solid;
+}
+
+.main-nav__item:first-child {
+  border-top: 1px #e6e6e6 solid;
 }
 
 .main-nav__item a[href] {
@@ -60,6 +65,10 @@
 @media (min-width: @tablet-width) {
   .main-nav__list {
     position: relative;
+  }
+
+  .main-nav__item:first-child {
+    border-top: none;
   }
 
   //прячем бургер

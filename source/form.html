@@ -15,7 +15,7 @@
   <link rel="preload" href="/fonts/oswald/oswaldmedium.woff2" as="font">
 </head>
 
-<body class="page__body wrapper">
+<body class="page__body"><!--wrapper-->
   <header class="main-header">
     <div class="main-header__logo-wrapper">
       <a class="main-header__logo logo" href="index.html">
@@ -117,7 +117,7 @@
           </fieldset>
         </div>
 
-        <fieldset class="request-form__contact-owner contact-owner">
+        <fieldset class="request-form__contact-owner contact-owner container">
           <legend class="contact-owner__title ">Контактные данные (владельца кота)</legend>
           <div class="contact-owner__container container container--modal ">
             <div class="contact-owner__input-container ">
@@ -137,7 +137,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="request-form__comment comment">
+        <fieldset class="request-form__comment comment container">
           <legend class="comment__title fieldset-title">Комментарий</legend>
 
           <textarea class="comment__text container container--modal" name="comment" id="comment" cols="30" rows="10"
@@ -145,7 +145,7 @@
 
         </fieldset>
 
-        <fieldset class="request-form__options options">
+        <fieldset class="request-form__options options container">
 
           <legend class="options__title fieldset-title">Дополнительно</legend>
           <ul class="options__list container container--modal">
