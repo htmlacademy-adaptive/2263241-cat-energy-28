@@ -1,6 +1,8 @@
 .main-header {
   display: flex;
   flex-direction: column;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .main-header__logo-wrapper {
@@ -8,7 +10,6 @@
   padding: 0 20px;
   padding-top: 10px;
   padding-bottom: 17px;
-  border-bottom: 1px #e6e6e6 solid;
 }
 
 .main-header__logo {
@@ -26,7 +27,6 @@
     align-items: center;
     padding-top: 18px;
     width: @tablet-container-width;
-    margin: 0 auto;
   }
 
   .main-header__logo-wrapper {
@@ -48,32 +48,26 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 53px;
     width: @desktop-container-width;
-    margin: 0 auto;
-    position: relative;
   }
 
   .main-header--index::before {
     content: "";
-    background-image: url("../img/index-background-desktop.jpg");
+    background-image: linear-gradient(fade(#68b738, 85%), fade(#68b738, 85%)), url("../img/index-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
     background-color: fade(@accent-color, 85%);
-    background-size: 720px 694px, 720px 694px;
-    background-position: center, center;
+    background-size: 100% 694px, 1044px 694px;
+    background-position: top left, top left;
     background-repeat: no-repeat;
-    width: 720px;
+    width: 50%;
     height: 694px;
     position: absolute;
     top: 0;
-    right: -110px;
+    right: 0;
     z-index: -2;
   }
 

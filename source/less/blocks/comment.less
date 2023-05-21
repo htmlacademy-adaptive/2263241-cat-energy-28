@@ -12,18 +12,30 @@
   background-color: @accent-color;
   top: -50px;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100vw;
   box-shadow: 100vw 0 0 0 @accent-color;
 }
 
 .comment__title {
   .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 26px; @color: @title-color);
-  width: 121px;
-  padding-left: 20px;
-  padding-right: 22px;
+  width: fit-content;
+  max-width: 250px;
   background-color: @main-color;
   margin-bottom: 38px;
+  margin-left: -2px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 42px);
+    height: 52px;
+    background-color: @main-color;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+  }
 }
 
 .comment__text {
@@ -43,11 +55,15 @@
 @media (min-width: @tablet-width) {
   .comment__title {
     .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @title-color);
-    width: 182px;
-    padding-left: 39px;
-    padding-right: 38px;
-    margin-left: 30px;
+    max-width: 600px;
+    margin-left: 36px;
     margin-bottom: 76px;
+
+    &::after {
+      width: calc(100% + 77px);
+      height: 72px;
+      left: -36px;
+    }
   }
 
   .comment::before {
@@ -66,10 +82,12 @@
 
 @media (min-width: @desktop-width) {
   .comment__title {
-    width: 182px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 70px;
+    margin-left: 0;
     margin-bottom: 76px;
+
+    &::after {
+      width: calc(100% + 80px);
+      left: -40px;
+    }
   }
 }

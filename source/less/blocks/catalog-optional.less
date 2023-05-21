@@ -7,14 +7,25 @@
 
 .catalog-optional__title {
   padding-top: 0;
-  padding-right: 21px;
-  padding-left: 21px;
   margin: 0;
   margin-bottom: 36px;
   .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 24px; @color: @title-color);
   text-align: left;
-  width: 226px;
+  width: fit-content;
+  max-width: 250px;
   background-color: @main-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 31px);
+    height: 48px;
+    background-color: @main-color;
+    top: 0;
+    left: -10px;
+    z-index: -1;
+  }
 }
 
 .catalog-optional::before {
@@ -24,9 +35,9 @@
   position: absolute;
   top: 14px;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100vw;
-  box-shadow: 100vw 0 0 0 #68b738;
+  box-shadow: 100vw 0 0 0 @accent-color;
 }
 
 .catalog-optional__container {
@@ -123,9 +134,7 @@
 
   .catalog-optional::before {
     top: 20px;
-    // left: -38vw;
-    // width: 139vw;
-    left: auto;
+    left: -50vw;
     right: 0;
   }
 
@@ -134,12 +143,15 @@
   }
 
   .catalog-optional__title {
-    width: 339px;
-    padding-right: 37px;
-    padding-left: 36px;
-    margin-left: 30px;
+    max-width: 600px;
+    margin-left: 36px;
     margin-bottom: 80px;
     .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @title-color);
+
+    &::after {
+      width: calc(100% + 73px);
+      left: -36px;
+    }
   }
 
   .catalog-optional__container {
@@ -230,10 +242,13 @@
   }
 
   .catalog-optional__title {
-    padding-right: 34px;
-    padding-left: 40px;
-    margin-left: 69px;
+    margin-left: 0;
     margin-bottom: 81px;
+
+    &::after {
+      width: calc(100% + 73px);
+      left: -36px;
+    }
   }
 
   .catalog-optional__container {

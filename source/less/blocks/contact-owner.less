@@ -8,10 +8,22 @@
 .contact-owner__title {
   .set-font(@font-family: @font-title; @font-size: 24px; @font-weight: 400; @line-height: 26px; @color: @title-color);
   margin-bottom: 35px;
+  margin-left: -2px;
   width: 187px;
-  padding-left: 20px;
-  padding-right: 14px;
+  max-width: 250px;
   background-color: @main-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 34px);
+    height: 52px;
+    background-color: @main-color;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+  }
 }
 
 .contact-owner::before {
@@ -21,7 +33,7 @@
   background-color: @accent-color;
   top: -72px;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100vw;
   box-shadow: 100vw 0 0 0 @accent-color;
 }
@@ -93,11 +105,16 @@
   .contact-owner__title {
     .set-font(@font-family: @font-title; @font-size: 36px; @font-weight: 400; @line-height: 36px; @color: @title-color);
     margin-bottom: 76px;
-    margin-left: 30px;
+    margin-left: 37px;
     margin-right: auto;
-    width: 515px;
-    padding-left: 39px;
-    padding-right: 42px;
+    width: fit-content;
+    max-width: 600px;
+
+    &::after {
+      width: calc(100% + 78px);
+      height: 72px;
+      left: -39px;
+    }
   }
 
   .contact-owner__label {
@@ -126,10 +143,11 @@
 
 @media (min-width: @desktop-width) {
   .contact-owner__title {
-    margin-bottom: 76px;
-    margin-left: 70px;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 0;
+
+    &::after {
+      left: -40px;
+    }
   }
 
   .contact-owner__container {
